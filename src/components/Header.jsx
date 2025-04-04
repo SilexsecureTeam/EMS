@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <div>
       <div>
-        <div className='w-full pr-72 flex justify-end bg-[#D9D9D9] h-16 p-2'>
+        <div className='w-full pr-45 flex justify-end bg-[#D9D9D9] h-16 p-2'>
             <div className='relative'>
             <input className='border-2 border-[#C3AA8C] mr-3.5 pl-4 py-2' type="text" placeholder='Search the site' />
             <SearchIcon className='absolute cursor-pointer bottom-4 right-6 border-l-2 pl-0.5' size={20} color="#020202" />
@@ -21,7 +21,7 @@ const Header = () => {
                 </div>
             </div>
         </div>
-        <div className='flex justify-between px-35  mt-6 pb-14 border-b-1 '>
+        <div className='flex justify-between px-15  mt-6 pb-14 border-b-1 '>
            <div className='pl-5'>
             <img src={logo} alt="logo" />
             </div>
@@ -46,7 +46,7 @@ const Header = () => {
             <ShoppingCart size={40} /> 
             </div>
         </div>
-        <div className='flex header-size gap-x-20 mt-5 mb-3 pl-50 font-sm font-bold '>
+        <div className='flex header-size gap-x-20 mt-5 mb-3 pl-15 font-sm font-bold '>
             <h4 className='text-[#856149] '>Home</h4>
             <div class="flex items-center ">
              <select class="appearance-none ">
