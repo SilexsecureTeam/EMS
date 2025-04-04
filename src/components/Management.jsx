@@ -31,8 +31,8 @@ const Management = () => {
 
   return (
     <div className='bg-[#CFBDA2] px-20 py-30 text-center'>
-     <h1 className='mb-3 text-black'>The Management & Management Programs</h1>
-     <p className='mb-8 text-xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, repudiandae?</p> 
+     <h1 className='mb-3 text-[#333333] font-semibold text-4xl'>The Etiquette & Management Programs</h1>
+     <p className='mb-8 text-lg'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, repudiandae?</p> 
       <div className="flex flex-wrap -mx-2">
         {containers.map((container) => (
           <div 

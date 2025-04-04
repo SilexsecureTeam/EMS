@@ -6,16 +6,13 @@ import dinner from '../assets/dining-table.jpg'
 const Immersive = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleSlides, setVisibleSlides] = useState(3);
-//   const [isTransitioning, setIsTransitioning] = useState(false);
 
-  // Sample images - replace with your own
   const images = [
     { id: 1, src: bedroom, alt: "Image 1" },
     { id: 2, src: seminar, alt: "Image 2" },
     { id: 3, src: dinner, alt: "Image 3" },
   ];
 
-  // Function to handle responsive behavior
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 640) {
@@ -37,18 +34,14 @@ const Immersive = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
- // Create a circular array of images for infinite scrolling effect
   const getVisibleImages = () => {
-    // Create a circular version of the images array for smooth transitions
     const totalImages = images.length;
-    let visibleImages = [...images];
+    let visibleImages = [...images]; 
     
-    // Add images from the beginning to the end for wraparound effect
     for (let i = 0; i < visibleSlides; i++) {
       visibleImages.push({...images[i], id: `${images[i].id}-clone`});
     }
     
-    // Add images from the end to the beginning for wraparound effect
     for (let i = totalImages - 1; i >= totalImages - visibleSlides && i >= 0; i--) {
       visibleImages.unshift({...images[i], id: `${images[i].id}-clone-start`});
     }
@@ -65,7 +58,7 @@ const Immersive = () => {
 
   return (
     <div className="w-full mx-auto px-20 my-20">
-        <h1 className='pl-10 max-w-[800px] mb-10 font-bold text-black'>Immersive etiquette education for leaders at all levels</h1>
+        <h1 className='pl-10 text-5xl mb-10 font-semibold text-black'>Immersive etiquette education <br /> for leaders at all levels</h1>
         <div className="overflow-hidden relative">
           <div 
             className="flex transition-transform duration-300 ease-in-out"

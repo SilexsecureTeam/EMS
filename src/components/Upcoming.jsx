@@ -5,7 +5,7 @@ import glassware from '../assets/glassware.jpg'
 const Upcoming = () => {
   return (
     <div className='bg-[#7D7D7D] px-20 py-25 text-center'>
-      <h1 className='mb-10 text-white'>Upcoming Programs</h1>
+      <h1 className='mb-10 text-white text-3xl'>Upcoming Programs</h1>
       <div className="flex gap-6 p-4">
       {/* First container */}
       <div className="flex flex-col h-72 md:flex-row border-2 border-black bg-gray-100  shadow-md overflow-hidden">
