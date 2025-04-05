@@ -5,7 +5,7 @@ import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react'
 const Footer = () => {
   return (
     <div className='bg-white'>
-        <div className='py-16 w-full px-16 bg-[#9F7757] flex flex-1 flex-wrap justify-between items-start text-white'>
+        <div className='py-16 w-full sm:px-16 px-7 bg-[#9F7757] flex flex-1 flex-wrap justify-between items-start text-white'>
       <div className='max-w-[250px] mb-8'>
         <img src={logo} alt="logo" className='bg-white mb-5 w-[200px]' />
         <p className='mb-5 text-lg'>Interdum velit laoreet id donec ultrices
