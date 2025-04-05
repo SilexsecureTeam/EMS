@@ -28,7 +28,7 @@ const Services = () => {
         },
     ]
   return (
-    <div className=' bg-[#D1D1D1] p-20 '>
+    <div className=' bg-[#D1D1D1] py-20 px-5 sm:px-20'>
       <h2 className='text-3xl text-[#193728] font-bold text-center mb-12'>Our Premium Services</h2>
       <div className="flex flex-wrap gap-5 justify-between">
         {services.map((service, index) => (

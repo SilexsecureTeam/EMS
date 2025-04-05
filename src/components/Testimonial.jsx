@@ -184,7 +184,7 @@ const Testimonial = () => {
 
   return (
     <div className='next w-full py-16 px-5'>
-      <h2 className='text-3xl text-center text-[#333333] font-bold '>Why choose The Etiquette and Management School</h2>
+      <h2 className='md:text-3xl text-2xl  text-center text-[#333333] font-bold '>Why choose The Etiquette and Management School</h2>
       <h3 className='text-center mt-4 mb-8 text-lg font-normal block mx-auto max-w-[500px]'>Whether it's a first business on etiquette or the last one
       in management, EMS is here to support you on every step of your creative journey.</h3>
 
@@ -202,7 +202,7 @@ const Testimonial = () => {
         {/* Slider Track */}
         <div 
           ref={trackRef}
-          className="flex transition-transform duration-500 ease-in-out"
+          className="flex  transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(${-currentIndex * (containerRef.current ? containerRef.current.offsetWidth / cardsPerView : 0)}px)` }}
         >
           {testimonials.map((testimonial) => (

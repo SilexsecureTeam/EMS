@@ -38,11 +38,11 @@ const News = () => {
   return (
     <div className='w-full bg-gray-200 py-16 px-5'>
       <h2 className='text-3xl text-black text-center mb-5'>Latest News</h2>
-      <div className="flex flex-wrap px-4">
+      <div className="flex flex-wrap md:px-4">
         {newsItems.map((item) => (
           <div 
             key={item.id} 
-            className="w-full px-4 mb-8 
+            className="w-full px-2 md:px-4 mb-8 
                        sm:w-full 
                        md:w-1/2 
                        lg:w-1/3"

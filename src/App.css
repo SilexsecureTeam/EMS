@@ -2,25 +2,12 @@
 background-color: #193728;
 padding: 10px 20px;
 border-radius: 0;
-margin-right: 20px;
-}
-.head-btn{
-    border: 2px solid #856149;
-    padding: 10px 40px;
-    border-radius: 0;
 }
 .header-user{
     background-color: #856149;
     border-radius: 50%;
-    height: 40px;
-    width: 40px;
-}
-.header-size{
-    font-size: 22px;
-    font-weight: 600;
-}
-.header-am{
-    font-size: 20px;
+    height: 25px;
+    width: 25px;
 }
 .header-shadow{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -29,11 +16,28 @@ margin-right: 20px;
     background-color: #193728;
     padding: 10px 20px;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 12px;
 }
 .current{
     background-color: #193728;
 }
 .next{
     background-color: #D9D9D9;
+}
+@media (max-width: 880px) {
+   .con{
+    padding-top: 30px;
+    padding-bottom: 30px;
+   }
+    .con-img{
+    display: none;
+   }
+}
+@media (max-width: 390px) {
+   .faq-p{
+    line-height: 35px;
+   }
+   .faq-btn{
+    display: grid;
+   }
 }

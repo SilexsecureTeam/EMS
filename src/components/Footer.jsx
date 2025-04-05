@@ -5,8 +5,8 @@ import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react'
 const Footer = () => {
   return (
     <div className='bg-white'>
-        <div className='py-20 w-full px-16 bg-[#9F7757] flex flex-1 flex-wrap justify-between items-start text-white'>
-      <div className='max-w-[250px]'>
+        <div className='py-16 w-full px-16 bg-[#9F7757] flex flex-1 flex-wrap justify-between items-start text-white'>
+      <div className='max-w-[250px] mb-8'>
         <img src={logo} alt="logo" className='bg-white mb-5 w-[200px]' />
         <p className='mb-5 text-lg'>Interdum velit laoreet id donec ultrices
 tincidunt arcu. Tincidunt tortor aliqua
@@ -18,7 +18,7 @@ mfacilisi cras fermentum odio eu.</p>
     <Linkedin className='text-black bg-white rounded-full h-8 w-8 p-2 cursor-pointer' />  
 </div>
       </div>
-      <div className='max-w-[180px]'>
+      <div className='max-w-[180px] mb-8'>
         <h2 className='text-2xl font-bold mb-2'>Our Services:</h2>
         <ul className='grid gap-2 text-lg'>
             <li><a href="#">Scelerisque pharetra</a></li>
@@ -28,7 +28,7 @@ mfacilisi cras fermentum odio eu.</p>
             <li><a href="#">Blog News</a></li>
         </ul>
       </div>
-      <div className='max-w-[180px]'>
+      <div className='max-w-[180px] mb-8'>
         <h2 className='text-2xl font-bold mb-2'>Our Company</h2>
         <ul className='grid gap-2 text-lg'>
             <li><a href="#">Home</a></li>

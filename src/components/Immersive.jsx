@@ -57,8 +57,8 @@ const Immersive = () => {
   };
 
   return (
-    <div className="w-full mx-auto px-20 my-20">
-        <h1 className='pl-10 text-5xl mb-10 font-semibold text-black'>Immersive etiquette education <br /> for leaders at all levels</h1>
+    <div className="w-full mx-auto lg:px-20 px-5 my-20">
+        <h1 className='sm:pl-10 lg:text-5xl sm:text-3xl text-xl sm:mb-10 mb-4 sm:font-semibold font-bold text-[#333333]'>Immersive etiquette education <br /> for leaders at all levels</h1>
         <div className="overflow-hidden relative">
           <div 
             className="flex transition-transform duration-300 ease-in-out"
