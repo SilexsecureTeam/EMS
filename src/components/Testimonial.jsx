@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import avatar from '../assets/avatar.png'
-import { QuoteIcon } from 'lucide-react';
+// import { QuoteIcon } from 'lucide-react';
 import quote from '../assets/quote.png'
 
 const Testimonial = () => {
@@ -218,7 +218,7 @@ const Testimonial = () => {
                 <div className='grid'>
                     <div className='flex gap-x-2 mb-5'>
                   <img 
-                    src={testimonial.src} 
+                    src={testimonial.src}  
                     alt={testimonial.alt} 
                     className="w-14 h-14 mr-3 object-fill rounded-lg shadow-md"
                   />
