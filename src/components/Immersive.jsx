@@ -2,170 +2,161 @@ import React, { useState, useEffect, useRef } from 'react';
 import bedroom from '../assets/bedroom.jpg'
 import seminar from '../assets/seminar.png'
 import dinner from '../assets/dining-table.jpg'
+import mixing from '../assets/mixing.jpg'
+import waiter from '../assets/waiter.jpg'
 
 const Immersive = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-  const [cardsPerView, setCardsPerView] = useState(1);
-  const [maxIndex, setMaxIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [startPosition, setStartPosition] = useState(0);
   const [currentTranslate, setCurrentTranslate] = useState(0);
   const [prevTranslate, setPrevTranslate] = useState(0);
+  const [animationID, setAnimationID] = useState(null);
+  const [slidesPerView, setSlidesPerView] = useState(1);
+  const [maxIndex, setMaxIndex] = useState(0);
   
-  const trackRef = useRef(null);
+  const sliderRef = useRef(null);
   const containerRef = useRef(null);
-  const animationRef = useRef(null);
 
   const images = [
     { id: 1, src: bedroom, alt: "Image 1" },
     { id: 2, src: seminar, alt: "Image 2" },
     { id: 3, src: dinner, alt: "Image 3" },
+    { id: 4, src: mixing, alt: "Image 3" },
+    { id: 5, src: waiter, alt: "Image 3" },
   ];
 
-       // Calculate cards per view based on screen width
-        useEffect(() => {
-          const calculateCardsPerView = () => {
-            if (window.innerWidth >= 1024) {
-              return 3; // Desktop
-            } else if (window.innerWidth >= 640) {
-              return 2; // Tablet
-            } else {
-              return 1; // Mobile
-            }
-          };
-          
-          const updateDimensions = () => {
-            const newCardsPerView = calculateCardsPerView();
-            setCardsPerView(newCardsPerView);
-            setMaxIndex(Math.max(0, images.length - newCardsPerView));
-            
-            // Ensure current index is within bounds after resize
-            setCurrentIndex(prev => Math.min(prev, Math.max(0, images.length - newCardsPerView)));
-          };
-          
-          updateDimensions();
-          window.addEventListener('resize', updateDimensions);
-          
-          return () => {
-            window.removeEventListener('resize', updateDimensions);
-          };
-        }, []);
-        
-        // Animation function for smooth dragging
-        const animation = () => {
-          if (trackRef.current) {
-            setSliderPosition();
-          }
-          if (isDragging) {
-            animationRef.current = requestAnimationFrame(animation);
-          }
-        };
-        
-        // Set the slider position
-        const setSliderPosition = () => {
-          if (trackRef.current) {
-            trackRef.current.style.transform = `translateX(${currentTranslate}px)`;
-          }
-        };
-        
-        // Get position for mouse or touch event
-        const getPositionX = (event) => {
-          return event.type.includes('mouse') 
-            ? event.pageX 
-            : event.touches[0].clientX;
-        };
-        
-        // Handle touch/mouse start
-        const handleStart = (event) => {
-          setIsDragging(true);
-          setStartPosition(getPositionX(event));
-          animationRef.current = requestAnimationFrame(animation);
-        };
-        
-        // Handle touch/mouse move
-        const handleMove = (event) => {
-          if (isDragging) {
-            const currentPosition = getPositionX(event);
-            // const cardWidth = containerRef.current ? containerRef.current.offsetWidth / cardsPerView : 0;
-            setCurrentTranslate(prevTranslate + currentPosition - startPosition);
-          }
-        };
-        
-        // Handle touch/mouse end
-        const handleEnd = () => {
-          setIsDragging(false);
-          cancelAnimationFrame(animationRef.current);
-          
-          // const cardWidth = containerRef.current ? containerRef.current.offsetWidth / cardsPerView : 0;
-          const movedBy = currentTranslate - prevTranslate;
-          
-          // Determine if slide should move to next/prev
-          if (movedBy < -50 && currentIndex < maxIndex) {
-            setCurrentIndex(prev => prev + 1);
-          } else if (movedBy > 50 && currentIndex > 0) {
-            setCurrentIndex(prev => prev - 1);
-          }
-          
-          finishDrag();
-        };
-        
-        // Finalize drag and update position
-        const finishDrag = () => {
-          const cardWidth = containerRef.current ? containerRef.current.offsetWidth / cardsPerView : 0;
-          const newTranslate = -currentIndex * cardWidth;
-          
-          setCurrentTranslate(newTranslate);
-          setPrevTranslate(newTranslate);
-          
-          if (trackRef.current) {
-            trackRef.current.style.transition = 'transform 0.5s ease';
-            trackRef.current.style.transform = `translateX(${newTranslate}px)`;
-          }
-        };
-        
-        // Go to a specific dot/index
-        const goToIndex = (index) => {
-          setCurrentIndex(index);
-          const cardWidth = containerRef.current ? containerRef.current.offsetWidth / cardsPerView : 0;
-          const newTranslate = -index * cardWidth;
-          
-          setCurrentTranslate(newTranslate);
-          setPrevTranslate(newTranslate);
-          
-          if (trackRef.current) {
-            trackRef.current.style.transition = 'transform 0.5s ease';
-            trackRef.current.style.transform = `translateX(${newTranslate}px)`;
-          }
-        };
-        
-        // Update slider when current index changes
-        useEffect(() => {
-          if (!isDragging) {
-            finishDrag();
-          }
-        }, [currentIndex, cardsPerView]);
-        
-        // Create dots based on cards per view
-        const renderDots = () => {
-          const dotsCount = Math.ceil(images.length / cardsPerView);
-          const dots = [];
-          
-          for (let i = 0; i < dotsCount; i++) {
-            const isActive = Math.floor(currentIndex / cardsPerView) === i;
-            dots.push(
-              <button
-                key={i}
-                onClick={() => goToIndex(i * cardsPerView)}
-                className={`w-2 h-2 rounded-full mx-1 transition-colors bg-white border-2 border-[#193728] duration-300 ${
-                  isActive ? 'bg-[#193728]' : 'bg-white'
-                }`}
-                aria-label={`Go to slide ${i + 1}`}
-              />
-            );
-          }
-          
-          return dots;
-        };
+    // Update slides per view based on screen size
+  useEffect(() => {
+    const updateSlidesPerView = () => {
+      let newSlidesPerView;
+      
+      if (window.innerWidth >= 1024) {
+        newSlidesPerView = 3; // Laptop/Desktop view (3 slides)
+      } else if (window.innerWidth >= 640) {
+        newSlidesPerView = 2; // Tablet view (2 slides)
+      } else {
+        newSlidesPerView = 1; // Mobile view (1 slide)
+      }
+      
+      setSlidesPerView(newSlidesPerView);
+      
+      // Calculate max index (total slides - 1)
+      // We're now moving one slide at a time, so max index is images.length - 1
+      const newMaxIndex = Math.max(0, images.length - 1);
+      setMaxIndex(newMaxIndex);
+      
+      // Ensure current index is not out of bounds
+      if (currentIndex > newMaxIndex) {
+        setCurrentIndex(newMaxIndex);
+      }
+    };
+    
+    updateSlidesPerView();
+    window.addEventListener('resize', updateSlidesPerView);
+    
+    return () => {
+      window.removeEventListener('resize', updateSlidesPerView);
+    };
+  }, [images.length, currentIndex]);
+
+  // Get position of mouse or touch event
+  const getPositionX = (event) => {
+    return event.type.includes('mouse') 
+      ? event.pageX 
+      : event.touches[0].clientX;
+  };
+
+  // Animation for smooth movement
+  const animation = () => {
+    setSliderPosition();
+    if (isDragging) {
+      const animID = requestAnimationFrame(animation);
+      setAnimationID(animID);
+    }
+  };
+
+  // Position the slider during dragging
+  const setSliderPosition = () => {
+    if (sliderRef.current) {
+      sliderRef.current.style.transform = `translateX(${currentTranslate}px)`;
+    }
+  };
+
+  // Handle the start of dragging
+  const handleDragStart = (event) => {
+    setIsDragging(true);
+    setStartPosition(getPositionX(event));
+    const animID = requestAnimationFrame(animation);
+    setAnimationID(animID);
+  };
+
+  // Handle movement during dragging
+  const handleDragMove = (event) => {
+    if (isDragging) {
+      const currentPosition = getPositionX(event);
+      const moveDistance = currentPosition - startPosition;
+      setCurrentTranslate(prevTranslate + moveDistance);
+    }
+  };
+
+  // Handle the end of dragging
+  const handleDragEnd = () => {
+    cancelAnimationFrame(animationID);
+    setIsDragging(false);
+    
+    const movedBy = currentTranslate - prevTranslate;
+    const sliderWidth = containerRef.current?.offsetWidth || 0;
+    
+    // If dragged more than 100px or 1/5 of slider width, change slide
+    const dragThreshold = Math.min(100, sliderWidth / 5);
+    
+    if (movedBy < -dragThreshold && currentIndex < maxIndex) {
+      // Dragged left - go to next slide
+      setCurrentIndex(currentIndex + 1);
+    } else if (movedBy > dragThreshold && currentIndex > 0) {
+      // Dragged right - go to previous slide
+      setCurrentIndex(currentIndex - 1);
+    }
+    
+    // Reset position to the current slide
+    updateSlidePosition();
+  };
+
+  // Update slide position
+  const updateSlidePosition = () => {
+    if (containerRef.current && sliderRef.current) {
+      const slideWidth = containerRef.current.offsetWidth / slidesPerView;
+      // Move one slide at a time
+      const newTranslate = -currentIndex * slideWidth;
+      
+      if (sliderRef.current) {
+        sliderRef.current.style.transition = 'transform 0.3s ease-out';
+        sliderRef.current.style.transform = `translateX(${newTranslate}px)`;
+      }
+      
+      setCurrentTranslate(newTranslate);
+      setPrevTranslate(newTranslate);
+    }
+  };
+
+  // Update slider position when index changes or on window resize
+  useEffect(() => {
+    if (!isDragging) {
+      updateSlidePosition();
+    }
+  }, [currentIndex, slidesPerView, isDragging]);
+
+  // Calculate visible slides based on current position
+  const getVisibleIndices = () => {
+    const indices = [];
+    for (let i = 0; i < slidesPerView; i++) {
+      if (currentIndex + i < images.length) {
+        indices.push(currentIndex + i);
+      }
+    }
+    return indices;
+  };
 
   return (
     <div className="w-full mx-auto lg:px-20 px-5 my-20">
@@ -173,27 +164,24 @@ const Immersive = () => {
         <div 
                 ref={containerRef}
                 className="relative overflow-hidden touch-pan-y cursor-grab active:cursor-grabbing"
-                onTouchStart={handleStart}
-                onTouchMove={handleMove}
-                onTouchEnd={handleEnd}
-                onMouseDown={handleStart}
-                onMouseMove={isDragging ? handleMove : null}
-                onMouseUp={handleEnd}
-                onMouseLeave={handleEnd}
+                onTouchStart={handleDragStart}
+                onTouchMove={handleDragMove}
+                onTouchEnd={handleDragEnd}
+                onMouseDown={handleDragStart}
+                onMouseMove={isDragging ? handleDragMove : null}
+                onMouseUp={handleDragEnd}
+                onMouseLeave={isDragging ? handleDragEnd : null}
               >
                 {/* Slider Track */}
                 <div 
-                  ref={trackRef}
+                  ref={sliderRef}
                   className="flex  transition-transform duration-500 ease-in-out"
-                  style={{ transform: `translateX(${-currentIndex * (containerRef.current ? containerRef.current.offsetWidth / cardsPerView : 0)}px)` }}
+                  style={{ touchAction: 'pan-y' }}
                 >
                   {images.map((image) => (
                     <div 
                       key={image.id} 
-                      className={`flex-shrink-0 px-2 ${
-                        cardsPerView === 1 ? 'w-full' : 
-                        cardsPerView === 2 ? 'w-1/2' : 'w-1/3'
-                      }`}
+                      className={`flex-shrink-0 lg:w-1/3 sm:w-1/2 px-2 ${100 / slidesPerView}%`}
                     > 
                       <div className="">
                          <img 
@@ -207,10 +195,18 @@ const Immersive = () => {
                 </div>
               </div>
         
-                {/* Dots Indicator */}
-                <div className="flex justify-center mt-6">
-                {renderDots()}
-              </div>
+                <div className="flex justify-between w-[150px] cursor-pointer mx-auto mt-4 flex-wrap">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className={`w-4 h-4 rounded-full border-[#C3AA8C]  border-2 ${
+              getVisibleIndices().includes(index) ? 'bg-[#C3AA8C]' : 'bg-white'
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
     </div>
   );
 };

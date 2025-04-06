@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import table from '../assets/tables.png';
 import bedroom from '../assets/bedroom.jpg';
-import businesswoman from '../assets/businesswoman.jpg';
+import dining from '../assets/dining-table.jpg';
 
 const Hero = () => {
   const images = [
     table,
     bedroom,
-    businesswoman
+    dining
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -81,7 +81,7 @@ const Hero = () => {
       onTouchEnd={handleDragEnd}
     >
       <div
-        className="h-full bg-cover bg-center transition-all duration-500 ease-in-out"
+        className="h-full bg-cover bg-center object-cover transition-all duration-500 ease-in-out"
         style={{ 
           backgroundImage: `url(${images[currentSlide]})`,
           transform: `translateX(${translateX}px)`,
@@ -103,13 +103,13 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <div className="absolute bottom-5 left-1/2  transform -translate-x-1/2 flex space-x-2">
         {images.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full ${
-              currentSlide === index ? 'bg-white' : 'bg-gray-400'
+            className={`w-3 h-3 rounded-full border-[#C3AA8C] border-2 ${
+              currentSlide === index ? 'bg-[#C3AA8C]' : 'bg-white'
             }`}
           />
         ))}
