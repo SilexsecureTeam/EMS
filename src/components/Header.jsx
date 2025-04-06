@@ -14,24 +14,24 @@ const Header = () => {
   return (
     <div>
       <div>
-        <div className='w-full xl:pr-45 md:pr-35 sm:pr-20 flex justify-end bg-[#D9D9D9] h-16 p-2'>
+        <div className='w-full xl:pr-33 md:pr-35 sm:pr-20 flex justify-end bg-[#D9D9D9] h-16 p-2'>
             <div className='relative'>
             <input className='border-2 w-[150px]  border-[#C3AA8C] mr-3.5 pl-2 py-2' type="text" placeholder='Search the site' />
             <SearchIcon className='absolute cursor-pointer bottom-4 right-6 border-l-2 pl-0.5' size={20} color="#020202" />
             </div>
             <div class="relative inline-block text-left">
-             <select class="block w-full font-medium sm:px-6 px-3 rounded-none py-3 pr-7 leading-tight bg-[#C3AA8C] text-[14px] border-[#856149] border-2  appearance-none focus:outline-none">
+             <select class="block w-full font-medium sm:px-6 px-3 md:px-12 rounded-none py-2 pr-7 leading-tight bg-[#C3AA8C] text-[17px] border-[#856149] border-2  appearance-none focus:outline-none">
              <option value="option1">Option 1</option>
              </select>
-                <div class=" absolute inset-y-0 right-2 flex items-center bottom-0 px-2 ">
+                <div class=" absolute inset-y-0 md:right-6.5 md:bottom-1 right-1 flex items-center bottom-0 px-2 ">
                   <img src={vector} alt="vector" className='cursor-pointer' />
                 </div>
             </div>
         </div>
         <div>
         <div className='flex justify-between items-center px-5 mt-6 pb-14 border-b-1 '>
-           <div className='pl-3'>
-            <img src={logo} alt="logo" className='lg:w-45 w-35' />
+           <div className='pl-3 md:pl-15'>
+            <img src={logo} alt="logo" className='lg:w-55 md:45 w-35' />
             </div>
             <div className=' md:items-center lg:gap-x-5 md:gap-x-2 hidden md:flex'>
                 <h4 className='font-medium text-[#333333]'>I am</h4>
@@ -44,7 +44,7 @@ const Header = () => {
                 </div>
                 <h2 className='bg-[#193728] p-2.5 text-center text-white'>GO</h2>
             </div>
-            <button className='border-2 cursor-pointer lg:px-[#40px] px-7 head-btn border-[#856149] text-[#856149] md:block hidden py-3 font-medium'>
+            <button className='border-2 cursor-pointer lg:px-[40px] px-7 head-btn border-[#856149] text-[#856149] md:block hidden py-3 font-medium'>
                 APPLY
             </button>
             <button className='text-white md:block hidden header-btn px-8 py-3 font-medium'>
@@ -133,22 +133,22 @@ const Header = () => {
         </div>
         </div>
         </div>
-        <div className='md:flex hidden mt-5 px-10 mb-3 text-[#333333] justify-between font-semibold '>
-            <h4 className='text-[#856149] text-xl'>Home</h4>
+        <div className='md:flex w-[82%] hidden py-2 mt-5 px-10 mb-3 text-[#333333] justify-between font-semibold '>
+            <h4 className='text-[#856149] text-lg'>Home</h4>
             <div class="flex items-center ">
-             <select class="appearance-none text-xl">
+             <select class="appearance-none text-lg">
              <option value="courses">Academics</option>
              </select>
                   <img src={vector} alt="vector" className='cursor-pointer pl-1' />
             </div>
             <div class="flex items-center ">
-             <select class="appearance-none text-xl">
+             <select class="appearance-none text-lg">
              <option value="courses">Courses</option>
              </select>
                   <img src={vector} alt="vector" className='cursor-pointer pl-1' />
             </div>
             <div class="flex items-center ">
-             <select class="appearance-none text-xl">
+             <select class="appearance-none text-lg">
              <option value="courses">About Us</option>
              </select>
                   <img src={vector} alt="vector" className='cursor-pointer pl-1' />
@@ -156,7 +156,7 @@ const Header = () => {
             <h4 className='text-xl'>Blogs</h4>
             <h4 className='text-xl'>Testimonials</h4>
             <div class="flex items-center ">
-             <select class="appearance-none text-xl">
+             <select class="appearance-none text-lg">
              <option value="courses">Our Services</option>
              </select>
                   <img src={vector} alt="vector" className='cursor-pointer pl-1' />
