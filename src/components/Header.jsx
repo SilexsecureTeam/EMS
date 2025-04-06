@@ -51,7 +51,7 @@ const Header = () => {
                 CONTACT
             </button>
             <UserRound className='header-user md:block hidden'/>
-            <ShoppingCart size={35} className='md:block hidden'/> 
+            <ShoppingCart size={22} className='md:block hidden'/> 
             </div>
             <div className="md:hidden">
             <button 

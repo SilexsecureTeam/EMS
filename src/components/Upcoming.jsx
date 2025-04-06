@@ -16,9 +16,9 @@ const Upcoming = () => {
             className="w-full h-full  object-cover"
           />
         </div>
-        <div className="md:w-[60%] p-4 flex text-start  flex-col justify-center">
-          <h2 className='sm:text-2xl text-xl font-semibold  text-start mb-1'>The Art of Modern Etiquette</h2>
-          <h4 className=' text-[16px] mb-7 font-normal'>Tuesday, Febuary 18, 2025 12pm - 1pm</h4>
+        <div className="md:w-[60%] py-4 px-1.5 flex text-start  flex-col justify-center">
+          <h2 className='sm:text-xl text-lg font-semibold  text-start mb-1'>The Art of Modern Etiquette</h2>
+          <h4 className=' text-[15px] mb-7 font-normal'>Tuesday, Febuary 18, 2025 12pm - 1pm</h4>
           <h2 className='sm:text-xl text-lg font-semibold  mb-1'>PHYSICAL EVENT</h2>
            <p className='sm:texl-lg text-sm'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam culpa rem impedit facilis, doloremque adipisci dolorum pariatur velit praesentium nostrum.</p>
         </div>
@@ -33,9 +33,9 @@ const Upcoming = () => {
             className="w-full h-full  object-cover"
           />
         </div>
-        <div className="md:w-[60%] p-4 flex text-start  flex-col justify-center">
-          <h2 className='sm:text-2xl text-xl font-semibold text-start mb-1'>The Art of Modern Etiquette</h2>
-          <h4 className=' text-[16px] mb-7 font-normal'>Tuesday, Febuary 18, 2025 12pm - 1pm</h4>
+        <div className="md:w-[60%] py-4 px-1.5 flex text-start  flex-col justify-center">
+          <h2 className='sm:text-xl text-lg font-semibold text-start mb-1'>The Art of Modern Etiquette</h2>
+          <h4 className=' text-[15px] mb-7 font-normal'>Tuesday, Febuary 18, 2025 12pm - 1pm</h4>
           <h2 className='sm:text-xl text-lg font-semibold  mb-1'>PHYSICAL EVENT</h2>
            <p className='sm:texl-lg text-sm'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam culpa rem impedit facilis, doloremque adipisci dolorum pariatur velit praesentium nostrum.</p>
         </div>
