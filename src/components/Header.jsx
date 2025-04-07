@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import logo from '../assets/logo.png'
+import logo from '../assets/newlogo.png'
 import { UserRound, ShoppingCart, SearchIcon } from 'lucide-react'
 import vector from '../assets/Vector.png'
 
@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <div>
       <div>
-        <div className='w-full xl:pr-33 md:pr-35 sm:pr-20 flex justify-end bg-[#D9D9D9] h-16 p-2'>
+        <div className='w-full  md:pr-26.5 sm:pr-20 flex justify-end bg-[#D9D9D9] h-16 p-2'>
             <div className='relative'>
             <input className='border-2 w-[150px]  border-[#C3AA8C] mr-3.5 pl-2 py-2' type="text" placeholder='Search the site' />
             <SearchIcon className='absolute cursor-pointer bottom-4 right-6 border-l-2 pl-0.5' size={20} color="#020202" />
@@ -90,7 +90,7 @@ const Header = () => {
             </div>
             <div className='flex gap-x-2 items-center'>
           <UserRound className='header-user '/>
-          <ShoppingCart size={25} /> 
+          <ShoppingCart size={25} />  
           </div>
           </div>
           <a href="#" className="block px-3 text-xl font-semibold py-1 rounded hover:bg-[#C3AA8C] transition-colors">Home</a>
@@ -133,7 +133,7 @@ const Header = () => {
         </div>
         </div>
         </div>
-        <div className='md:flex w-[82%] hidden py-2 mt-5 px-10 mb-3 text-[#333333] justify-between font-semibold '>
+        <div className='md:flex w-[77%] hidden py-2 mt-5 px-6 mb-3 text-[#333333] justify-between font-semibold '>
             <h4 className='text-[#856149] text-lg'>Home</h4>
             <div class="flex items-center ">
              <select class="appearance-none text-lg">
