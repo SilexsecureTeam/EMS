@@ -6,7 +6,7 @@ const Management = () => {
         { id: 1,
          title: 'Etiquette & Business Protocol',
          image: mixing,
-         paragraph: 'Lorem ipsum dolor sit amet consectetur in in dignissim vulputate lectus e' },
+         paragraph: 'Lorem ipsum dolor sit amet consectetur in in dignissim vulputate' },
         { id: 2,
          title: 'Social & Business Courses',
          image: mixing,
@@ -49,10 +49,10 @@ const Management = () => {
                 
                 {/* Text content */}
                 <div className="absolute inset-0 flex flex-col  items-center justify-center">
-                  <h2 className="text-white mb-2 text-3xl max-w-[300px] font-semibold z-10">
+                  <h2 className="text-white mb-2 text-[28px] max-w-[300px] font-semibold z-10">
                     {container.title}
                   </h2>
-                  <h3 className="text-white text-lg max-w-[300px] font-normal z-10">
+                  <h3 className="text-white text-base max-w-[300px] font-normal z-10">
                     {container.paragraph}
                   </h3>
                 </div>

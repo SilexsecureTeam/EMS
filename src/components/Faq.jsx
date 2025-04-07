@@ -6,7 +6,7 @@ const Faq = () => {
   return (
     <section className="w-full py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row justify-between items-center gap-8">
+          <div className="flex flex-col lg:flex-row justify-between items-start gap-8">
             <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
               <img 
                 src={business}
@@ -15,9 +15,9 @@ const Faq = () => {
               />
             </div>
             
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-1/2 lg:pl-7">
               <div className="max-w-lg">
-              <h2 className="text-3xl font-semibold text-[#333333] mb-4">We're here to help</h2>
+              <h2 className="text-[32px] font-semibold text-[#333333] mb-4">We're here to help</h2>
                 {/* <hr className='h-1 w-50 mb-5 bg-[#6C4F40]' /> */}
                 <p className=" mb-10 text-xl faq-p leading-10">
                 Read through our FAQs and, if you can't find what you're looking for, our experts will be happy to answer your questions.

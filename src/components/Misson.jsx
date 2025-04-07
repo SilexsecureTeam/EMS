@@ -14,13 +14,13 @@ const Misson = () => {
           />
         </div>
         
-        <div className="w-full lg:w-1/2">
+        <div className="w-full lg:w-1/2 lg:pl-7">
           <div className="max-w-lg">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#6C4F40] mb-4">
-              Featured Section Title
+            <h2 className="text-3xl md:text-[32px] font-bold text-[#6C4F40] mb-4">
+              Our Mission
             </h2>
             <hr className='h-1 w-50 mb-5 bg-[#6C4F40]' />
-            <p className=" mb-10 text-xl text-[#333333] leading-10">
+            <p className=" mb-10 text-base text-[#333333] leading-10">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
               incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
               exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

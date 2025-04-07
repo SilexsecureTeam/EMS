@@ -37,7 +37,7 @@ const News = () => {
     ];
   return (
     <div className='w-full bg-gray-200 py-16 px-5'>
-      <h2 className='text-3xl text-black text-center mb-5'>Latest News</h2>
+      <h2 className='text-[32px] font-medium text-black text-center mb-5'>Latest News</h2>
       <div className="flex flex-wrap md:px-4">
         {newsItems.map((item) => (
           <div 
@@ -47,7 +47,7 @@ const News = () => {
                        md:w-1/2 
                        lg:w-1/3"
           >
-            <div className="block bg-white pb-2 overflow-hidden h-full">
+            <div className="block bg-white pb-5 overflow-hidden h-full">
               <div className="w-full">
                 <img 
                   src={item.image} 
@@ -55,20 +55,20 @@ const News = () => {
                   className="w-full h-76 object-fill mb-4"
                 />
               </div>
-              <h3 className="font-semibold text-2xl mb-5 w-[250px] pl-2 ">{item.title}</h3>
+              <h3 className="font-semibold text-[22px] mb-5 w-[250px] pl-2 ">{item.title}</h3>
               <div className='flex justify-between items-center px-4'>
                 <div className='flex gap-x-3 justify-between items-center'>
                 <img src={item.user} alt={item.title} />
-                <h3 className='font-semibold text-lg'>{item.name}</h3>
+                <h3 className='font-medium text-[16px]'>{item.name}</h3>
                 </div>
-                <h3>{item.date}</h3>
-                <div className='flex justify-between items-center'>
+                <h3 className='text-[12.18px] text-[#6C757D] font-light'>{item.date}</h3>
+                <div className='flex text-[12px] text-[#6C757D] font-light justify-between items-center'>
                 <Share2Icon size={12} />
                 <p>1k  shares</p>
                 </div>
               </div>
                 <p className="text-gray-600 p-4 text-lg mb-3">{item.excerpt}</p>
-              <a href="#" className='text-black border-b-2 border-b-black font-semibold text-lg mx-7'>View Post</a>
+              <a href="#" className='text-[#121416] border-b-2 border-b-[#121416]  font-semibold text-[16px] mx-7'>View Post</a>
             </div>
           </div>
         ))}

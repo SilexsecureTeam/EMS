@@ -22,11 +22,11 @@ const Immersive = () => {
     { id: 1, src: bedroom, alt: "Image 1" },
     { id: 2, src: seminar, alt: "Image 2" },
     { id: 3, src: dinner, alt: "Image 3" },
-    { id: 4, src: mixing, alt: "Image 3" },
-    { id: 5, src: waiter, alt: "Image 3" },
+    { id: 4, src: mixing, alt: "Image 4" },
+    { id: 5, src: waiter, alt: "Image 5" },
   ];
 
-    // Update slides per view based on screen size
+  // Update slides per view based on screen size
   useEffect(() => {
     const updateSlidesPerView = () => {
       let newSlidesPerView;
@@ -41,9 +41,9 @@ const Immersive = () => {
       
       setSlidesPerView(newSlidesPerView);
       
-      // Calculate max index (total slides - 1)
-      // We're now moving one slide at a time, so max index is images.length - 1
-      const newMaxIndex = Math.max(0, images.length - 1);
+      // Calculate max index based on slides per view
+      // This is the key change - we want to show the last image on the right edge
+      const newMaxIndex = Math.max(0, images.length - newSlidesPerView);
       setMaxIndex(newMaxIndex);
       
       // Ensure current index is not out of bounds
@@ -148,19 +148,24 @@ const Immersive = () => {
   }, [currentIndex, slidesPerView, isDragging]);
 
   // Calculate visible slides based on current position
-  const getVisibleIndices = () => {
-    const indices = [];
-    for (let i = 0; i < slidesPerView; i++) {
-      if (currentIndex + i < images.length) {
-        indices.push(currentIndex + i);
-      }
-    }
-    return indices;
+  // const getVisibleIndices = () => {
+  //   const indices = [];
+  //   for (let i = 0; i < slidesPerView; i++) {
+  //     if (currentIndex + i < images.length) {
+  //       indices.push(currentIndex + i);
+  //     }
+  //   }
+  //   return indices;
+  // };
+
+  // Helper function to check if an index is visible
+  const isIndexVisible = (index) => {
+    return index >= currentIndex && index < currentIndex + slidesPerView;
   };
 
   return (
     <div className="w-full mx-auto lg:px-20 px-5 my-20">
-        <h1 className='sm:pl-10 lg:text-5xl sm:text-3xl text-xl sm:mb-10 mb-4 sm:font-semibold font-bold text-[#333333]'>Immersive etiquette education <br /> for leaders at all levels</h1>
+        <h1 className='sm:pl-10 lg:text-[40px] sm:text-3xl text-xl sm:mb-10 mb-4 sm:font-semibold font-bold text-[#333333]'>Immersive etiquette education <br /> for leaders at all levels</h1>
         <div 
                 ref={containerRef}
                 className="relative overflow-hidden touch-pan-y cursor-grab active:cursor-grabbing"
@@ -175,13 +180,13 @@ const Immersive = () => {
                 {/* Slider Track */}
                 <div 
                   ref={sliderRef}
-                  className="flex  transition-transform duration-500 ease-in-out"
+                  className="flex transition-transform duration-500 ease-in-out"
                   style={{ touchAction: 'pan-y' }}
                 >
                   {images.map((image) => (
                     <div 
                       key={image.id} 
-                      className={`flex-shrink-0 lg:w-1/3 sm:w-1/2 px-2 ${100 / slidesPerView}%`}
+                      className={`flex-shrink-0 lg:w-1/3 sm:w-1/2 w-full px-2`}
                     > 
                       <div className="">
                          <img 
@@ -199,9 +204,13 @@ const Immersive = () => {
         {images.map((_, index) => (
           <button
             key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`w-4 h-4 rounded-full border-[#C3AA8C]  border-2 ${
-              getVisibleIndices().includes(index) ? 'bg-[#C3AA8C]' : 'bg-white'
+            onClick={() => {
+              // Prevent setting index beyond maxIndex
+              const newIndex = Math.min(index, maxIndex);
+              setCurrentIndex(newIndex);
+            }}
+            className={`w-4 h-4 rounded-full border-[#C3AA8C] border-2 ${
+              isIndexVisible(index) ? 'bg-[#C3AA8C]' : 'bg-white'
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
@@ -212,6 +221,3 @@ const Immersive = () => {
 };
 
 export default Immersive;
-
- 
-// </div> 

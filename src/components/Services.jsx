@@ -29,7 +29,7 @@ const Services = () => {
     ]
   return (
     <div className=' bg-[#D1D1D1] py-20 px-5 sm:px-20'>
-      <h2 className='text-3xl text-[#193728] font-bold text-center mb-12'>Our Premium Services</h2>
+      <h2 className='text-3xl md:text-[40px] text-[#193728] font-bold text-center mb-12'>Our Premium Services</h2>
       <div className="flex flex-wrap gap-5 justify-between">
         {services.map((service, index) => (
           <div 
@@ -37,8 +37,8 @@ const Services = () => {
             className="flex-1 min-w-[250px] max-w-full p-5"
           >
             <img src={service.image} alt={service.id} className='w-[48px] h-[38px] mb-6' />
-             <h2 className='text-[#193728] font-semibold text-xl mb-6'>{service.title}</h2>
-             <p className='text-lg mb-6 text-[#333333]'>{service.paragraph}</p>
+             <h2 className='text-[#193728] font-smediun text-xl mb-6'>{service.title}</h2>
+             <p className='text-[14px] font-light mb-6 text-[#333333]'>{service.paragraph}</p>
              <a href="#" className='text-[#193728] font-bold'>Learn More....</a>
           </div>
         ))}

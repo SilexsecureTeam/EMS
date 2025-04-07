@@ -64,7 +64,7 @@ const Testimonial = () => {
         return () => {
           window.removeEventListener('resize', updateDimensions);
         };
-      }, []);
+      }, [testimonials.length]);
       
       // Animation function for smooth dragging
       const animation = () => {
@@ -184,8 +184,8 @@ const Testimonial = () => {
 
   return (
     <div className='next w-full py-16 px-5'>
-      <h2 className='md:text-3xl text-2xl  text-center text-[#333333] font-bold '>Why choose The Etiquette and Management School</h2>
-      <h3 className='text-center mt-4 mb-8 text-lg font-normal block mx-auto max-w-[500px]'>Whether it's a first business on etiquette or the last one
+      <h2 className='md:text-[40px] text-2xl  text-center text-[#333333] font-semibold '>Why choose The Etiquette and Management School</h2>
+      <h3 className='text-center mt-4 mb-8 text-[22px] font-normal block mx-auto max-w-[766px]'>Whether it's a first business on etiquette or the last one
       in management, EMS is here to support you on every step of your creative journey.</h3>
 
       <div 
@@ -223,15 +223,15 @@ const Testimonial = () => {
                     className="w-14 h-14 mr-3 object-fill rounded-lg shadow-md"
                   />
                   <div>
-                    <h2 className='font-bold text-lg'>{testimonial.name}</h2>
-                    <h4>{testimonial.work}</h4>
+                    <h2 className='font-bold text-[#193728] text-[20px]'>{testimonial.name}</h2>
+                    <h4 className='text-[#111827]'>{testimonial.work}</h4>
                   </div>
                   </div>
                   
                   <div className='relative max-w-[350px]'>
                     <img src={quote} alt="quote" className='absolute left-[-20px] ' />
                   {/* <QuoteIcon size={20}  /> */}
-                  <p>{testimonial.paragraph}</p>
+                  <p className='text-[#333333] text-base'>{testimonial.paragraph}</p>
                   </div>
                   </div>
                 </div>
