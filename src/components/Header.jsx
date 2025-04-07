@@ -3,6 +3,7 @@ import { Menu, X } from 'lucide-react';
 import logo from '../assets/newlogo.png'
 import { UserRound, ShoppingCart, SearchIcon } from 'lucide-react'
 import vector from '../assets/Vector.png'
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -101,146 +102,82 @@ const Header = () => {
           </div>
         </div> 
         <div 
-        className={`md:hidden mb-5 overflow-hidden transition-all duration-300 ease-in-out ${
-          isMenuOpen ? 'max-h-fit opacity-100' : 'max-h-0 opacity-0'
-        }`}
-      >
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-[#333333]">
-          <div className='flex justify-between gap-x-3 items-center '>
-          <div className='items-center gap-x-1 flex flex-wrap'>
-                <h4 className='font-medium text-[14px] text-[#333333]'>I am</h4>
-                <div class="relative flex items-center text-left">
-                <ul className="relative ">
-          {/* Nested Dropdown Item */}
-          <li className="relative" onMouseEnter={() => setIsSubchooseOpen(true)} onMouseLeave={() => setIsSubchooseOpen(false)}>
-            <a href="#" className="inline-block w-[130px]  font-medium px-0.5 py-2 pr-5 leading-tight  border-[#856149] border-1 overflow-x-scroll header-shadow  appearance-none focus:outline-none">
-              Choose an <img src={vector} alt="vector" className='cursor-pointer absolute right-4 flex items-center bottom-4.5 ' /> </a>
-            {/* Submenu */}
-            {isSubchooseOpen && (
-              <ul className="absolute left-0 top-full w-[180px] z-40 bg-white rounded-md shadow-lg py-1">
-                <li> <a href="#" className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">
-                    Choose an option 1 </a> </li>
-                <li> <a href="#" className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">
-                    Choose an option 2 </a> </li>
-                <li> <a href="#" className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">
-                    Choose an option 3 </a> </li>
-              </ul>
-            )}
-          </li>          
-                 </ul>
-                <h2 className='bg-[#193728] p-1 text-center text-white'>GO</h2>
-            </div>
-            </div>
-            <div className='flex gap-x-2 items-center'>
-          <UserRound className='header-user '/>
-          <ShoppingCart size={25} />  
-          </div>
-          </div>
-          <ul className="relative w-[120px] ">
-          {/* Nested Dropdown Item */}
-          <li className="relative w-[120px] " onMouseEnter={() => setIsSubmenuOpen(true)} onMouseLeave={() => setIsSubmenuOpen(false)}>
-            <a href="#" className="flex pl-3 items-center text-lg pr-2 text-[#C3AA8C]">
-              Home <img src={vector} alt="vector" className='cursor-pointer pt-1 pl-1' /> </a>
-            {/* Submenu */}
-            {isSubmenuOpen && (
-              <ul className="absolute left-0 top-full w-[80px] z-40 bg-white rounded-md shadow-lg py-1">
-                <li> <a href="#" className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">
-                    Home 1 </a> </li>
-                <li> <a href="#" className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">
-                    Home 2 </a> </li>
-                <li> <a href="#" className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">
-                    Home 3 </a> </li>
-              </ul>
-            )}
-          </li>          
-        </ul>
-        <ul className="relative ">
-          {/* Nested Dropdown Item */}
-          <li className="relative w-[120px] " onMouseEnter={() => setIsSubacademicOpen(true)} onMouseLeave={() => setIsSubacademicOpen(false)}>
-            <a href="#" className="flex items-center text-[16px] pl-3 pr-2 text-[#333333]">
-              Academics <img src={vector} alt="vector" className='cursor-pointer pt-1 pl-1' /> </a>
-            {/* Submenu */}
-            {isSubacademicOpen && (
-              <ul className="absolute left-0 top-full w-[120px] z-40 bg-white rounded-md shadow-lg py-1">
-                <li> <a href="#" className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">
-                    Academics 1 </a> </li>
-                <li> <a href="#" className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">
-                    Academics 2 </a> </li>
-                <li> <a href="#" className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">
-                    Academics 3 </a> </li>
-              </ul>
-            )}
-          </li>          
-        </ul>
-        <ul className="relative w-[120px] ">
-          {/* Nested Dropdown Item */}
-          <li className="relative" onMouseEnter={() => setIsSubcourseOpen(true)} onMouseLeave={() => setIsSubcourseOpen(false)}>
-            <a href="#" className="flex items-center text-[16px] pr-2 pl-3 text-[#333333]">
-              Courses <img src={vector} alt="vector" className='cursor-pointer pt-1 pl-1' /> </a>
-            {/* Submenu */}
-            {isSubcourseOpen && (
-              <ul className="absolute left-0 top-full w-[95px] z-40 bg-white rounded-md shadow-lg py-1">
-                <li> <a href="#" className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">
-                    Courses 1 </a> </li>
-                <li> <a href="#" className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">
-                    Courses 2 </a> </li>
-                <li> <a href="#" className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">
-                    Courses 3 </a> </li>
-              </ul>
-            )}
-          </li>          
-        </ul>
-        <ul className="relative w-[120px] ">
-          {/* Nested Dropdown Item */}
-          <li className="relative" onMouseEnter={() => setIsSubaboutOpen(true)} onMouseLeave={() => setIsSubaboutOpen(false)}>
-            <a href="#" className="flex items-center text-[16px] pr-2 pl-3 text-[#333333]">
-              About Us <img src={vector} alt="vector" className='cursor-pointer pt-1 pl-1' /> </a>
-            {/* Submenu */}
-            {isSubaboutOpen && (
-              <ul className="absolute left-0 top-full w-[110px] z-40 bg-white rounded-md shadow-lg py-1">
-                <li> <a href="#" className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">
-                    About Us 1 </a> </li>
-                <li> <a href="#" className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">
-                    About Us 2 </a> </li>
-                <li> <a href="#" className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">
-                    About Us 3 </a> </li>
-              </ul>
-            )}
-          </li>          
-        </ul>
-          <a href="#" className="block px-3 text-[16px] py-1 rounded hover:bg-[#C3AA8C] transition-colors">Blogs</a>
-          <a href="#" className="block px-3 text-[16px] py-1 rounded hover:bg-[#C3AA8C] transition-colors">Testimonials</a>
-          <ul className="relative w-fit ">
-          {/* Nested Dropdown Item */}
-          <li className="relative" onMouseEnter={() => setIsSubserviceOpen(true)} onMouseLeave={() => setIsSubserviceOpen(false)}>
-            <a href="#" className="flex items-center text-[16px] pr-2 pl-3 text-[#333333]">
-              Our Services <img src={vector} alt="vector" className='cursor-pointer pt-1 pl-1' /> </a>
-            {/* Submenu */}
-            {isSubserviceOpen && (
-              <ul className="absolute left-0 top-full w-[134px] z-40 bg-white rounded-md shadow-lg py-1">
-                <li> <a href="#" className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">
-                    Our Services 1 </a> </li>
-                <li> <a href="#" className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">
-                    Our Services 2 </a> </li>
-                <li> <a href="#" className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">
-                    Our Services 3 </a> </li>
-              </ul>
-            )}
-          </li>          
-        </ul>
+  className={`md:hidden mb-5 overflow-hidden transition-all duration-300 ease-in-out ${
+    isMenuOpen ? 'max-h-fit opacity-100' : 'max-h-0 opacity-0'
+  }`}
+>
+  <div className="px-4 pt-4 pb-6 space-y-4 text-[#333333]">
+    {/* Top Row */}
+    <div className='flex justify-between items-center'>
+      <div className='flex flex-wrap items-center gap-2'>
+        <span className='font-medium text-sm'>I am</span>
+        <div className="relative">
+          <button
+            onClick={() => setIsSubchooseOpen(!isSubchooseOpen)}
+            className="inline-flex items-center justify-between w-[140px] border border-[#856149] px-2 py-1 rounded header-shadow"
+          >
+            Choose an
+            <img src={vector} alt="vector" className='ml-2 w-3' />
+          </button>
+          {isSubchooseOpen && (
+            <ul className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50">
+              {['Option 1', 'Option 2', 'Option 3'].map((opt, i) => (
+                <li key={i}>
+                  <a href="#" className="block px-4 py-2 hover:bg-[#C3AA8C]">{`Choose an ${opt}`}</a>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
-        <div className="px-5 py-2 border-t border-[#C3AA8C]">
-          <div className="flex flex-col space-y-2">
-            <button className="w-full px-4 py-2 text-center rounded bg-[#C3AA8C] transition-colors">
-              APPLY
-            </button>
-            <button className="w-full px-4 py-2 bg-[#C3AA8C] text-center rounded hover:bg-gray-100 transition-colors">
-              CONTACT
-            </button>
-          </div>
-        </div>
-        </div>
-        </div>
+        <button className='bg-[#193728] text-white px-3 py-1 rounded text-sm'>GO</button>
+      </div>
+
+      <div className='flex gap-3 items-center'>
+        <UserRound className='text-[#333333]' />
+        <ShoppingCart size={22} />
+      </div>
+    </div>
+
+    {/* Nav Links */}
+    {[
+      { title: 'Home', submenu: ['Home 1', 'Home 2', 'Home 3'], state: isSubmenuOpen, toggle: setIsSubmenuOpen },
+      { title: 'Academics', submenu: ['Academics 1', 'Academics 2'], state: isSubacademicOpen, toggle: setIsSubacademicOpen },
+      { title: 'Courses', submenu: ['Course 1', 'Course 2'], state: isSubcourseOpen, toggle: setIsSubcourseOpen },
+      { title: 'About Us', submenu: ['About 1', 'About 2'], state: isSubaboutOpen, toggle: setIsSubaboutOpen },
+      { title: 'Our Services', submenu: ['Service 1', 'Service 2'], state: isSubserviceOpen, toggle: setIsSubserviceOpen }
+    ].map(({ title, submenu, state, toggle }) => (
+      <div key={title} className="relative">
+        <button
+          onClick={() => toggle(!state)}
+          className="w-full flex justify-between items-center px-4 py-2 text-left text-sm font-medium hover:bg-[#C3AA8C] rounded"
+        >
+          {title}
+          <img src={vector} alt="arrow" className="ml-2 w-3" />
+        </button>
+        {state && (
+          <ul className="mt-1 ml-4 bg-white rounded shadow-inner">
+            {submenu.map((item, i) => (
+              <li key={i}>
+                <a href="#" className="block px-4 py-2 text-sm hover:bg-[#C3AA8C]">{item}</a>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    ))}
+
+    <a href="#" className="block px-4 py-2 rounded hover:bg-[#C3AA8C]">Blogs</a>
+    <a href="#" className="block px-4 py-2 rounded hover:bg-[#C3AA8C]">Testimonials</a>
+
+    {/* CTA Buttons */}
+    <div className="pt-4 border-t border-[#C3AA8C]">
+      <button className="w-full mb-2 px-4 py-2 text-center rounded bg-[#C3AA8C] text-white">APPLY</button>
+      <button className="w-full px-4 py-2 text-center rounded bg-white border border-[#C3AA8C] text-[#333333] hover:bg-[#C3AA8C] hover:text-white">CONTACT</button>
+    </div>
+  </div>
+</div>
+</div>
+
         <div className='md:flex w-[77%] hidden py-2 mt-5 pl-16 mb-3 text-[#333333] justify-between font-semibold '>
         <ul className="relative ">
           {/* Nested Dropdown Item */}
@@ -250,10 +187,10 @@ const Header = () => {
             {/* Submenu */}
             {isSubmenuOpen && (
               <ul className="absolute left-0 top-full w-[80px] z-40 bg-white rounded-md shadow-lg py-1">
-                <li> <a href="#" className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">
-                    Home 1 </a> </li>
-                <li> <a href="#" className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">
-                    Home 2 </a> </li>
+               <li> <a href="#" className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">
+                    Home 1 </a> </li> 
+                    <li> <NavLink to='/home2' className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">
+                    Home 2 </NavLink> </li>
                 <li> <a href="#" className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">
                     Home 3 </a> </li>
               </ul>
