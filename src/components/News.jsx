@@ -1,7 +1,7 @@
 import React from 'react'
 import bedroom from '../assets/bedroom.jpg'
 import chair from '../assets/chair.jpg'
-import seminar from '../assets/seminar.png'
+import womanwrite from '../assets/womanwrite.png'
 import avatar from '../assets/avatar.png'
 import { Share2Icon } from 'lucide-react'
 
@@ -10,7 +10,7 @@ const News = () => {
     {
         id: 1,
         title: "Integer Maecenas Eget Viverra",
-        image: bedroom,
+        image: womanwrite,
         excerpt: "Aenean eleifend ante maecenas pulvinar montes lorem et pede dis dolor pretium donec dictum. Vici consequat justo enim.",
         date: "April 2, 2025",
         name: "Joanna Wellick",
@@ -28,7 +28,7 @@ const News = () => {
       {
         id: 3,
         title: "Integer Maecenas Eget Viverra",
-        image: seminar,
+        image: bedroom,
         excerpt: "Aenean eleifend ante maecenas pulvinar montes lorem et pede dis dolor pretium donec dictum. Vici consequat justo enim.",
         date: "March 30, 2025",
         name: "Joanna Wellick",

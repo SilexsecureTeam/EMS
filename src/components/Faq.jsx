@@ -1,5 +1,5 @@
 import React from 'react'
-import business from '../assets/businesswoman.jpg'
+import woman from '../assets/womanglass.png'
 import { Mail } from 'lucide-react'
 
 const Faq = () => {
@@ -9,7 +9,7 @@ const Faq = () => {
           <div className="flex flex-col lg:flex-row justify-between items-start gap-8">
             <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
               <img 
-                src={business}
+                src={woman}
                 alt="Featured content" 
                 className="w-full h-90 object-fill "
               />

@@ -1,31 +1,37 @@
 import React from 'react'
-import mixing from '../assets/mixing.jpg'
+import lecture from '../assets/lecture.png'
+import talking from '../assets/talking.png'
+import sitting from '../assets/sitting.png'
+import kid from '../assets/kids.png'
+import plate from '../assets/plate.png'
+import standinglady from '../assets/standinglady.png'
+
 
 const Management = () => {
     const containers = [
         { id: 1,
          title: 'Etiquette & Business Protocol',
-         image: mixing,
+         image: talking,
          paragraph: 'Lorem ipsum dolor sit amet consectetur in in dignissim vulputate' },
         { id: 2,
          title: 'Social & Business Courses',
-         image: mixing,
+         image: sitting,
          paragraph: 'Lorem ipsum dolor sit amet consectetur in in dignissim vulputate' },
         { id: 3,
          title: 'Etiquette For Kids Courses',
-         image: mixing,
+         image: kid,
          paragraph: 'Lorem ipsum dolor sit amet consectetur in in dignissim vulputate' },
         { id: 4,
          title: 'Etiquette & Business Protocol',
-         image: mixing,
+         image: plate,
          paragraph: 'Lorem ipsum dolor sit amet consectetur in in dignissim vulputate' },
         { id: 5,
          title: 'Mangement & Business Protocol',
-         image: mixing,
+         image: standinglady,
          paragraph: 'Lorem ipsum dolor sit amet consectetur in in dignissim vulputate' },
         { id: 6,
          title: 'Etiquette & Business Protocol',
-         image: mixing,
+         image: lecture,
          paragraph: 'Lorem ipsum dolor sit amet consectetur in in dignissim vulputate' },
       ];
 

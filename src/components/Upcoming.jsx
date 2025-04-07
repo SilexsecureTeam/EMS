@@ -1,6 +1,6 @@
 import React from 'react'
-import waiter from '../assets/waiter.jpg'
-import glassware from '../assets/glassware.jpg'
+import champagne from '../assets/champagne.png'
+import plate from '../assets/plate.png'
 import feb from '../assets/feb.png'
 
 const Upcoming = () => {
@@ -12,9 +12,9 @@ const Upcoming = () => {
       <div className="md:flex md:h-86 h-fit border-2 border-black bg-gray-100  shadow-md overflow-hidden">
         <div className="md:w-[40%] relative w-full md:h-full h-50">
           <img
-            src={waiter}
+            src={champagne}
             alt="Sample 1"
-            className="w-full h-full  object-cover"
+            className="w-full h-full object-fill  lg:object-cover"
           />
           <img src={feb} alt="feb" className='absolute top-0 left-0 z-50' />
         </div>
@@ -30,7 +30,7 @@ const Upcoming = () => {
       <div className="md:flex md:h-86 h-fit border-2 border-black bg-gray-100  shadow-md overflow-hidden">
         <div className="relative md:w-[40%] w-full md:h-full h-50">
           <img
-            src={glassware}
+            src={plate}
             alt="Sample 2"
             className="w-full h-full  object-cover"
           />
