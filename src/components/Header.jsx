@@ -210,7 +210,7 @@ const Header = () => {
         </ul>
           <a href="#" className="block px-3 text-[16px] py-1 rounded hover:bg-[#C3AA8C] transition-colors">Blogs</a>
           <a href="#" className="block px-3 text-[16px] py-1 rounded hover:bg-[#C3AA8C] transition-colors">Testimonials</a>
-          <ul className="relative w-[120px] ">
+          <ul className="relative w-fit ">
           {/* Nested Dropdown Item */}
           <li className="relative" onMouseEnter={() => setIsSubserviceOpen(true)} onMouseLeave={() => setIsSubserviceOpen(false)}>
             <a href="#" className="flex items-center text-[16px] pr-2 pl-3 text-[#333333]">
