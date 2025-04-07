@@ -136,9 +136,9 @@ const Header = () => {
           <ShoppingCart size={25} />  
           </div>
           </div>
-          <ul className="relative ">
+          <ul className="relative w-[120px] ">
           {/* Nested Dropdown Item */}
-          <li className="relative" onMouseEnter={() => setIsSubmenuOpen(true)} onMouseLeave={() => setIsSubmenuOpen(false)}>
+          <li className="relative w-[120px] " onMouseEnter={() => setIsSubmenuOpen(true)} onMouseLeave={() => setIsSubmenuOpen(false)}>
             <a href="#" className="flex pl-3 items-center text-lg pr-2 text-[#C3AA8C]">
               Home <img src={vector} alt="vector" className='cursor-pointer pt-1 pl-1' /> </a>
             {/* Submenu */}
@@ -156,7 +156,7 @@ const Header = () => {
         </ul>
         <ul className="relative ">
           {/* Nested Dropdown Item */}
-          <li className="relative" onMouseEnter={() => setIsSubacademicOpen(true)} onMouseLeave={() => setIsSubacademicOpen(false)}>
+          <li className="relative w-[120px] " onMouseEnter={() => setIsSubacademicOpen(true)} onMouseLeave={() => setIsSubacademicOpen(false)}>
             <a href="#" className="flex items-center text-[16px] pl-3 pr-2 text-[#333333]">
               Academics <img src={vector} alt="vector" className='cursor-pointer pt-1 pl-1' /> </a>
             {/* Submenu */}
@@ -172,7 +172,7 @@ const Header = () => {
             )}
           </li>          
         </ul>
-        <ul className="relative ">
+        <ul className="relative w-[120px] ">
           {/* Nested Dropdown Item */}
           <li className="relative" onMouseEnter={() => setIsSubcourseOpen(true)} onMouseLeave={() => setIsSubcourseOpen(false)}>
             <a href="#" className="flex items-center text-[16px] pr-2 pl-3 text-[#333333]">
@@ -190,7 +190,7 @@ const Header = () => {
             )}
           </li>          
         </ul>
-        <ul className="relative ">
+        <ul className="relative w-[120px] ">
           {/* Nested Dropdown Item */}
           <li className="relative" onMouseEnter={() => setIsSubaboutOpen(true)} onMouseLeave={() => setIsSubaboutOpen(false)}>
             <a href="#" className="flex items-center text-[16px] pr-2 pl-3 text-[#333333]">
@@ -210,7 +210,7 @@ const Header = () => {
         </ul>
           <a href="#" className="block px-3 text-[16px] py-1 rounded hover:bg-[#C3AA8C] transition-colors">Blogs</a>
           <a href="#" className="block px-3 text-[16px] py-1 rounded hover:bg-[#C3AA8C] transition-colors">Testimonials</a>
-          <ul className="relative ">
+          <ul className="relative w-[120px] ">
           {/* Nested Dropdown Item */}
           <li className="relative" onMouseEnter={() => setIsSubserviceOpen(true)} onMouseLeave={() => setIsSubserviceOpen(false)}>
             <a href="#" className="flex items-center text-[16px] pr-2 pl-3 text-[#333333]">
