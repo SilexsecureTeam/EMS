@@ -71,7 +71,7 @@ const Hero2 = () => {
        
          return (
            <div 
-             className="h-screen relative home-2 overflow-hidden md:px-10 px-3"
+             className="h-screen relative home-2 overflow-hidden md:px-10 px-3 "
              ref={sliderRef}
              onMouseDown={handleDragStart}
              onMouseMove={handleDragMove}
@@ -82,7 +82,7 @@ const Hero2 = () => {
              onTouchEnd={handleDragEnd}
            >
              <div
-               className="h-full p-8 flex md:flex-row md:justify-between  flex-col bg-cover bg-center object-cover transition-all duration-500 ease-in-out"
+               className="h-full pt-12 md:pt-5 p-8 flex md:flex-row md:justify-between  flex-col bg-cover bg-center object-cover transition-all duration-500 ease-in-out"
                style={{ 
                  backgroundImage: `url(${images[currentSlide]})`,
                  transform: `translateX(${translateX}px)`,
@@ -90,15 +90,15 @@ const Hero2 = () => {
                }}
              >
                <div className="h-fit  flex items-center mb-3 md:mb-0 justify-center text-white">
-                 <div className="text-start">
+                 <div className="md:text-start text-center">
                    <h1 className="md:text-[64px] text-2xl leading-6 md:leading-12 font-semibold sm:max-w-[300px] md:max-w-[560px] mb-4">
-                     Master the Art of <br /> Professional <br /> Excellence
+                     Master the Art of Professional Excellence
                    </h1>
                    <p className="sm:text-lg text-sm font-medium md:text-2xl sm:max-w-[300px] md:max-w-[560px]">
                    Join the leading Etiquette & Management School <br />
                    and elevate your personal & corporate presence
                    </p>
-                   <div className='flex gap-x-2 items-center'>
+                   <div className='flex gap-x-2 items-center justify-center md:justify-start '>
                    <button className="mt-1 bg-[#193728] hero-btn cursor-pointer text-white">
                      Enroll Now
                    </button>
@@ -109,7 +109,7 @@ const Hero2 = () => {
                    </div>
                  </div>
                </div>
-               <div className='flex md:flex-col justify-center md:justify-end gap-3 gap-x-3' >
+               <div className='flex md:flex-col justify-center md:justify-start gap-3 gap-x-3' >
                 <FacebookIcon className='text-white cursor-pointer bg-[#C3AA8C] p-2' size={35} />
                 <TwitterIcon className='text-white cursor-pointer bg-[#C3AA8C] p-2' size={35} />
                 <InstagramIcon className='text-white cursor-pointer bg-[#C3AA8C] p-2' size={35} />
