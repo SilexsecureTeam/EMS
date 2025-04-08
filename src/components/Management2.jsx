@@ -47,7 +47,7 @@ const Management2 = () => {
             className="w-full md:w-1/2 lg:w-1/3 px-2 mb-4"
           >
             <div className="relative h-64 px-3">
-              <div 
+              <div   
                 className="absolute inset-0 bg-cover bg-[#7D7D7D] object-fill bg-center"
                 // style={{ backgroundImage: `url(${container.image})` }}
               >
@@ -56,7 +56,7 @@ const Management2 = () => {
                 
                 {/* Text content */}
                 <div className="absolute inset-0 flex flex-col  items-start p-5">
-                  <h2 className="text-white mb-5 text-[24px] max-w-[300px] font-bold z-10">
+                  <h2 className="text-white mb-5 md:text-[24px] text-[18px] max-w-[300px] font-bold z-10">
                     {container.title}
                   </h2>
                   <h3 className="text-white text-start mb-4 text-base max-w-[300px] font-normal z-10">
