@@ -1,4 +1,4 @@
-import { React, useState } from 'react'
+import React, { useState } from 'react';
 import newlogo from '../assets/newlogo.png'
 import vector from '../assets/vector.png'
 import { NavLink } from 'react-router-dom';
@@ -16,8 +16,8 @@ const Header2 = () => {
  const [isMobileServiceOpen, setIsMobileServiceOpen] = useState(false);
 
  return (
-   <div className='flex items-center md:px-5 pl-8 justify-between bg-white w-full h-[100px] '>
-     <img src={newlogo} className='lg:h-12 h-9' alt="logo" />
+   <div className='flex items-center md:px-5 justify-between bg-white w-full h-[100px] '>
+     <img src={newlogo} className='lg:h-12 h-9 lg:pl-7 pl-5 md:pl-10' alt="logo" />
      
      {/* Desktop Menu */}
      <div className='md:flex hidden lg:gap-x-6 gap-x-4.5 text-[#333333] justify-between font-semibold '>
@@ -27,7 +27,7 @@ const Header2 = () => {
              Home <img src={vector} alt="vector" className='cursor-pointer pt-1 pl-1' /> </a>
            {isSubmenuOpen && (
              <ul className="absolute left-0 top-full w-[80px] z-40 bg-white rounded-md shadow-lg py-1">
-               <li> <a href="#" className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">Home 1 </a> </li> 
+               <li> <a href="/" className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">Home 1 </a> </li> 
                <li> <NavLink to='/home2' className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">Home 2 </NavLink> </li>
                <li> <a href="#" className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">Home 3 </a> </li>
              </ul>

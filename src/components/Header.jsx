@@ -32,7 +32,7 @@ const Header = () => {
             <input className='border-2 w-[150px]  border-[#C3AA8C] mr-3.5 pl-2 py-2' type="text" placeholder='Search the site' />
             <SearchIcon className='absolute cursor-pointer bottom-4 right-6 border-l-2 pl-0.5' size={20} color="#020202" />
             </div>
-            <div class="relative inline-block text-left">
+            <div className="relative inline-block text-left">
             <ul className="relative ">
           {/* Nested Dropdown Item */}
           <li className="relative" onMouseEnter={() => setIsSuboptionOpen(true)} onMouseLeave={() => setIsSuboptionOpen(false)}>
