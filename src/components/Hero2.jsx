@@ -100,7 +100,7 @@ const Hero2 = () => {
                    and elevate your personal & corporate presence
                    </p>
                    <div className='flex gap-x-2 items-center justify-center md:justify-start '>
-                   <button className="mt-1 bg-[#193728] hero-btn cursor-pointer text-white">
+                   <button className="mt-1 bg-[#193728] font-semibold text-[21px] px-3 py-1.5cursor-pointer text-white">
                      Enroll Now
                    </button>
                    <div className="flex items-center">
@@ -125,7 +125,7 @@ const Hero2 = () => {
                            <Book size={30} color='#193728' className=' mb-1'/>
                            <p className='md:text-2xl text-lg  text-[#333333] font-bold'>Explore Courses</p>
                            <p className='text-[#333333] font-normal text-[14px] md:text-[16px]'>Lorem ipsum dolor sit amet consectetur.</p>
-                           <a href="# " className='text-[#333333] text-[14px] font-normal' > Learn More</a>
+                           <a href="# " className='text-[#333333] text-[14px] font-semibold' > Learn More</a>
                        </div>
                        </div> 
                        <img src={vertical} alt="ing" className='hidden md:block' />     
@@ -134,7 +134,7 @@ const Hero2 = () => {
                            <FolderOpenDotIcon  size={30} color='#193728' className=' mb-1'/>
                            <p className='md:text-2xl text-lg  text-[#333333] font-bold'>Browse Resources</p>
                            <p className='text-[#333333] font-normal text-[14px] md:text-[16px]'>Lorem ipsum dolor sit amet consectetur.</p>
-                           <a href="# " className='text-[#333333] text-[14px] font-normal' > Learn More</a>
+                           <a href="# " className='text-[#333333] text-[14px] font-semibold' > Learn More</a>
                        </div>
                        </div>
                        <img src={vertical} alt="ing" className='hidden md:block' />      
@@ -143,7 +143,7 @@ const Hero2 = () => {
                            <GraduationCapIcon size={30} color='#193728' className=' mb-1'/>
                            <p className='md:text-2xl text-lg  text-[#333333] font-bold'>Explore Events</p>
                            <p className='text-[#333333] font-normal text-[14px] md:text-[16px]'>Lorem ipsum dolor sit amet consectetur.</p>
-                           <a href="# " className='text-[#333333] text-[14px] font-normal' > Learn More</a>
+                           <a href="# " className='text-[#333333] text-[14px] font-semibold' > Learn More</a>
                        </div>
                        </div>      
                    </div>
