@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import newlogo from '../assets/newlogo.png'
-import vector from '../assets/vector.png'
+import vector from '../assets/Vector.png'
 import { NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react'
 
