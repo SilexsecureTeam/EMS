@@ -14,6 +14,11 @@ const Header = () => {
   const [isSubserviceOpen, setIsSubserviceOpen] = useState(false);
   const [isSubchooseOpen, setIsSubchooseOpen] = useState(false);
   const [isSuboptionOpen, setIsSuboptionOpen] = useState(false);
+  const [isMobileHomeOpen, setIsMobileHomeOpen] = useState(false);
+  const [isMobileAboutOpen, setIsMobileAboutOpen] = useState(false);;
+  const [isMobileAcademicOpen, setIsMobileAcademicOpen] = useState(false);
+  const [isMobileCourseOpen, setIsMobileCourseOpen] = useState(false);
+  const [isMobileServiceOpen, setIsMobileServiceOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -102,80 +107,129 @@ const Header = () => {
           </div>
         </div> 
         <div 
-  className={`md:hidden mb-5 overflow-hidden transition-all duration-300 ease-in-out ${
-    isMenuOpen ? 'max-h-fit opacity-100' : 'max-h-0 opacity-0'
-  }`}
->
-  <div className="px-4 pt-4 pb-6 space-y-4 text-[#333333]">
-    {/* Top Row */}
-    <div className='flex justify-between items-center'>
-      <div className='flex flex-wrap items-center gap-2'>
-        <span className='font-medium text-sm'>I am</span>
-        <div className="relative">
-          <button
-            onClick={() => setIsSubchooseOpen(!isSubchooseOpen)}
-            className="inline-flex items-center justify-between w-[140px] border border-[#856149] px-2 py-1 rounded header-shadow"
-          >
-            Choose an
-            <img src={vector} alt="vector" className='ml-2 w-3' />
-          </button>
-          {isSubchooseOpen && (
-            <ul className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50">
-              {['Option 1', 'Option 2', 'Option 3'].map((opt, i) => (
-                <li key={i}>
-                  <a href="#" className="block px-4 py-2 hover:bg-[#C3AA8C]">{`Choose an ${opt}`}</a>
-                </li>
-              ))}
-            </ul>
-          )}
+      className={`md:hidden mb-5 overflow-hidden transition-all duration-300 ease-in-out ${
+        isMenuOpen ? 'max-h-fit opacity-100' : 'max-h-0 opacity-0'
+      }`}
+    >
+      <div className="px-4 pt-4 pb-6 space-y-4 text-[#333333]">
+        {/* Top Row */}
+        <div className='flex justify-between items-center'>
+          <div className='flex flex-wrap items-center gap-2'>
+            <span className='font-medium text-sm'>I am</span>
+            <div className="relative">
+              <button
+                onClick={() => setIsSubchooseOpen(!isSubchooseOpen)}
+                className="inline-flex items-center justify-between w-[140px] border border-[#856149] px-2 py-1 rounded header-shadow"
+              >
+                Choose an
+                <img src={vector} alt="vector" className='ml-2 w-3' />
+              </button>
+              {isSubchooseOpen && (
+                <ul className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50">
+                  {['Option 1', 'Option 2', 'Option 3'].map((opt, i) => (
+                    <li key={i}>
+                      <a href="#" className="block px-4 py-2 hover:bg-[#C3AA8C]">{`Choose an ${opt}`}</a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+            <button className='bg-[#193728] text-white px-3 py-1 rounded text-sm'>GO</button>
+          </div>
+
+          <div className='flex gap-3 items-center'>
+            <UserRound className='text-[#333333]' />
+            <ShoppingCart size={22} />
+          </div>
         </div>
-        <button className='bg-[#193728] text-white px-3 py-1 rounded text-sm'>GO</button>
-      </div>
 
-      <div className='flex gap-3 items-center'>
-        <UserRound className='text-[#333333]' />
-        <ShoppingCart size={22} />
+        {/* Nav Links */}
+        <li className='list-none'>
+                     <button 
+                       className='w-full text-left px-4 py-2 flex items-center justify-between'
+                       onClick={() => setIsMobileHomeOpen(!isMobileHomeOpen)}
+                     >
+                       Home <img src={vector} alt="arrow" className="ml-2 w-3" />
+                     </button>
+                     {isMobileHomeOpen && (
+                       <ul className='pl-4 bg-gray-50'>
+                         <li><NavLink to='/' className='block px-4 py-2 hover:bg-[#C3AA8C]'>Home 1</NavLink></li>
+                         <li><NavLink to='/home2' className='block px-4 py-2 hover:bg-[#C3AA8C]'>Home 2</NavLink></li>
+                         <li><a href='#' className='block px-4 py-2 hover:bg-[#C3AA8C]'>Home 3</a></li>
+                       </ul>
+                     )}
+                   </li>
+                   <li className='list-none'>
+                     <button 
+                       className='w-full text-left px-4 py-2 flex items-center justify-between'
+                       onClick={() => setIsMobileAcademicOpen(!isMobileAcademicOpen)}
+                     >
+                       Academics <img src={vector} alt="arrow" className="ml-2 w-3" />
+                     </button>
+                     {isMobileAcademicOpen && (
+                       <ul className='pl-4 bg-gray-50'>
+                         <li><a href='#' className='block px-4 py-2 hover:bg-[#C3AA8C]'>Academic 1</a></li>
+                         <li><a href='#' className='block px-4 py-2 hover:bg-[#C3AA8C]'>Academic 2</a></li>
+                         <li><a href='#' className='block px-4 py-2 hover:bg-[#C3AA8C]'>Academic 3</a></li>
+                       </ul>
+                     )}
+                   </li>
+                   <li className='list-none'>
+                     <button 
+                       className='w-full text-left px-4 py-2 flex items-center justify-between'
+                       onClick={() => setIsMobileCourseOpen(!isMobileCourseOpen)}
+                     >
+                       Courses <img src={vector} alt="arrow" className="ml-2 w-3" />
+                     </button>
+                     {isMobileCourseOpen && (
+                       <ul className='pl-4 bg-gray-50'>
+                         <li><a href='#' className='block px-4 py-2 hover:bg-[#C3AA8C]'>Course 1</a></li>
+                         <li><a href='#' className='block px-4 py-2 hover:bg-[#C3AA8C]'>Course 2</a></li>
+                         <li><a href='#' className='block px-4 py-2 hover:bg-[#C3AA8C]'>Course 3</a></li>
+                       </ul>
+                     )}
+                   </li>
+                   <li className='list-none'>
+                     <button 
+                       className='w-full text-left px-4 py-2 flex items-center justify-between'
+                       onClick={() => setIsMobileAboutOpen(!isMobileAboutOpen)}
+                     >
+                       About Us <img src={vector} alt="arrow" className="ml-2 w-3" />
+                     </button>
+                     {isMobileAboutOpen && (
+                       <ul className='pl-4 bg-gray-50'>
+                         <li><a href='#' className='block px-4 py-2 hover:bg-[#C3AA8C]'>About Us 1</a></li>
+                         <li><a href='#' className='block px-4 py-2 hover:bg-[#C3AA8C]'>About Us 2</a></li>
+                         <li><a href='#' className='block px-4 py-2 hover:bg-[#C3AA8C]'>About Us 3</a></li>
+                       </ul>
+                     )}
+                   </li>
+                   <li className='list-none'>
+                     <button 
+                       className='w-full text-left px-4 py-2 flex items-center justify-between'
+                       onClick={() => setIsMobileServiceOpen(!isMobileServiceOpen)}
+                     >
+                       Our Services <img src={vector} alt="arrow" className="ml-2 w-3" />
+                     </button>
+                     {isMobileServiceOpen && (
+                       <ul className='pl-4 bg-gray-50'>
+                         <li><a href='#' className='block px-4 py-2 hover:bg-[#C3AA8C]'>Our Service 1</a></li>
+                         <li><a href='#' className='block px-4 py-2 hover:bg-[#C3AA8C]'>Our Service 2</a></li>
+                         <li><a href='#' className='block px-4 py-2 hover:bg-[#C3AA8C]'>Our Service 3</a></li>
+                       </ul>
+                     )}
+                   </li>
+
+        <a href="#" className="block px-4 py-2 rounded hover:bg-[#C3AA8C]">Blogs</a>
+        <a href="#" className="block px-4 py-2 rounded hover:bg-[#C3AA8C]">Testimonials</a>
+
+        {/* CTA Buttons */}
+        <div className="pt-4 boundary-t border-[#C3AA8C]">
+          <button className="w-full mb-2 px-4 py-2 text-center rounded bg-[#C3AA8C] text-white">APPLY</button>
+          <button className="w-full px-4 py-2 text-center rounded bg-white border border-[#C3AA8C] text-[#333333] hover:bg-[#C3AA8C] hover:text-white">CONTACT</button>
+        </div>
       </div>
     </div>
-
-    {/* Nav Links */}
-    {[
-      { title: 'Home', submenu: ['Home 1', 'Home 2', 'Home 3'], state: isSubmenuOpen, toggle: setIsSubmenuOpen },
-      { title: 'Academics', submenu: ['Academics 1', 'Academics 2'], state: isSubacademicOpen, toggle: setIsSubacademicOpen },
-      { title: 'Courses', submenu: ['Course 1', 'Course 2'], state: isSubcourseOpen, toggle: setIsSubcourseOpen },
-      { title: 'About Us', submenu: ['About 1', 'About 2'], state: isSubaboutOpen, toggle: setIsSubaboutOpen },
-      { title: 'Our Services', submenu: ['Service 1', 'Service 2'], state: isSubserviceOpen, toggle: setIsSubserviceOpen }
-    ].map(({ title, submenu, state, toggle }) => (
-      <div key={title} className="relative">
-        <button
-          onClick={() => toggle(!state)}
-          className="w-full flex justify-between items-center px-4 py-2 text-left text-sm font-medium hover:bg-[#C3AA8C] rounded"
-        >
-          {title}
-          <img src={vector} alt="arrow" className="ml-2 w-3" />
-        </button>
-        {state && (
-          <ul className="mt-1 ml-4 bg-white rounded shadow-inner">
-            {submenu.map((item, i) => (
-              <li key={i}>
-                <a href="#" className="block px-4 py-2 text-sm hover:bg-[#C3AA8C]">{item}</a>
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
-    ))}
-
-    <a href="#" className="block px-4 py-2 rounded hover:bg-[#C3AA8C]">Blogs</a>
-    <a href="#" className="block px-4 py-2 rounded hover:bg-[#C3AA8C]">Testimonials</a>
-
-    {/* CTA Buttons */}
-    <div className="pt-4 border-t border-[#C3AA8C]">
-      <button className="w-full mb-2 px-4 py-2 text-center rounded bg-[#C3AA8C] text-white">APPLY</button>
-      <button className="w-full px-4 py-2 text-center rounded bg-white border border-[#C3AA8C] text-[#333333] hover:bg-[#C3AA8C] hover:text-white">CONTACT</button>
-    </div>
-  </div>
-</div>
 </div>
 
         <div className='md:flex w-[77%] hidden py-2 mt-5 pl-16 mb-3 text-[#333333] justify-between font-semibold '>
