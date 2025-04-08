@@ -11,7 +11,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
+.home-2{
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
 
 body {
   margin: 0;

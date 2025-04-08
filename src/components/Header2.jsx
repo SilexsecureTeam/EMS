@@ -16,8 +16,8 @@ const Header2 = () => {
  const [isMobileServiceOpen, setIsMobileServiceOpen] = useState(false);
 
  return (
-   <div className='flex items-center md:px-5 justify-between bg-white w-full h-[100px] '>
-     <img src={newlogo} className='lg:h-12 h-9 lg:pl-7 pl-5 md:pl-10' alt="logo" />
+   <div className='flex items-center home-2 md:px-5 justify-between bg-white w-full h-[100px] '>
+     <img src={newlogo} className='lg:h-12 h-9 pl-5' alt="logo" />
      
      {/* Desktop Menu */}
      <div className='md:flex hidden lg:gap-x-6 gap-x-4.5 text-[#333333] justify-between font-semibold '>
