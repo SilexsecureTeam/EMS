@@ -60,7 +60,7 @@ const Header = () => {
             </div>
             <div className=' md:items-center lg:gap-x-5 md:gap-x-2 hidden md:flex'>
                 <h4 className='font-medium text-[#333333]'>I am</h4>
-                <div class="relative flex items-center text-left">
+                <div className="relative flex items-center text-left">
                 <ul className="relative ">
           {/* Nested Dropdown Item */}
           <li className="relative" onMouseEnter={() => setIsSubchooseOpen(true)} onMouseLeave={() => setIsSubchooseOpen(false)}>
