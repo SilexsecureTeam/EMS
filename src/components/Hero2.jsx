@@ -1,10 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import table from '../assets/tables.png';
 import bedroom from '../assets/bedroom.jpg';
-import dining from '../assets/dining-table.jpg';
-// import location from '../assets/location.png'
-// import phone from '../assets/phone.png'
-// import mail from '../assets/mail.png'
+import dining from '../assets/chair.jpg';
 import vertical from '../assets/vertical.png'
 import { Book, FacebookIcon, FolderOpenDotIcon, GraduationCapIcon, InstagramIcon, LinkedinIcon, MoveRight, TwitterIcon } from 'lucide-react';
 
@@ -107,7 +104,7 @@ const Hero2 = () => {
                      Enroll Now
                    </button>
                    <div className="flex items-center">
-                    <h4 className='font-semibold text-[16px]'>View Programs </h4>
+                    <h4 className='font-semibold text-[16px] text-white'>View Programs </h4>
                     <MoveRight className='ml-1 border-1 border-white p-[3px] rounded-full ' size={16} color='white' />
                    </div>
                    </div>
@@ -128,6 +125,7 @@ const Hero2 = () => {
                            <Book size={30} color='#193728' className=' mb-1'/>
                            <p className='md:text-2xl text-lg  text-[#333333] font-bold'>Explore Courses</p>
                            <p className='text-[#333333] font-normal text-[14px] md:text-[16px]'>Lorem ipsum dolor sit amet consectetur.</p>
+                           <a href="# " className='text-[#333333] text-[14px] font-normal' > Learn More</a>
                        </div>
                        </div> 
                        <img src={vertical} alt="ing" className='hidden md:block' />     
@@ -136,6 +134,7 @@ const Hero2 = () => {
                            <FolderOpenDotIcon  size={30} color='#193728' className=' mb-1'/>
                            <p className='md:text-2xl text-lg  text-[#333333] font-bold'>Browse Resources</p>
                            <p className='text-[#333333] font-normal text-[14px] md:text-[16px]'>Lorem ipsum dolor sit amet consectetur.</p>
+                           <a href="# " className='text-[#333333] text-[14px] font-normal' > Learn More</a>
                        </div>
                        </div>
                        <img src={vertical} alt="ing" className='hidden md:block' />      
@@ -144,6 +143,7 @@ const Hero2 = () => {
                            <GraduationCapIcon size={30} color='#193728' className=' mb-1'/>
                            <p className='md:text-2xl text-lg  text-[#333333] font-bold'>Explore Events</p>
                            <p className='text-[#333333] font-normal text-[14px] md:text-[16px]'>Lorem ipsum dolor sit amet consectetur.</p>
+                           <a href="# " className='text-[#333333] text-[14px] font-normal' > Learn More</a>
                        </div>
                        </div>      
                    </div>
