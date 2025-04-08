@@ -82,7 +82,7 @@ const Hero2 = () => {
              onTouchEnd={handleDragEnd}
            >
              <div
-               className="h-full p-8 flex md:flex-row md:justify-between flex-col bg-cover bg-center object-cover transition-all duration-500 ease-in-out"
+               className="h-full p-8 flex md:flex-row md:justify-between  flex-col bg-cover bg-center object-cover transition-all duration-500 ease-in-out"
                style={{ 
                  backgroundImage: `url(${images[currentSlide]})`,
                  transform: `translateX(${translateX}px)`,
@@ -109,7 +109,7 @@ const Hero2 = () => {
                    </div>
                  </div>
                </div>
-               <div className='flex md:flex-col gap-3 gap-x-3' >
+               <div className='flex md:flex-col justify-center md:justify-end gap-3 gap-x-3' >
                 <FacebookIcon className='text-white cursor-pointer bg-[#C3AA8C] p-2' size={35} />
                 <TwitterIcon className='text-white cursor-pointer bg-[#C3AA8C] p-2' size={35} />
                 <InstagramIcon className='text-white cursor-pointer bg-[#C3AA8C] p-2' size={35} />
