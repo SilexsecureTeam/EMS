@@ -2,7 +2,11 @@ import React, { useState, useEffect, useRef } from 'react';
 import table from '../assets/tables.png';
 import bedroom from '../assets/bedroom.jpg';
 import dining from '../assets/dining-table.jpg';
-import { FacebookIcon, InstagramIcon, LinkedinIcon, MoveRight, TwitterIcon } from 'lucide-react';
+// import location from '../assets/location.png'
+// import phone from '../assets/phone.png'
+// import mail from '../assets/mail.png'
+import vertical from '../assets/vertical.png'
+import { Book, FacebookIcon, FolderOpenDotIcon, GraduationCapIcon, InstagramIcon, LinkedinIcon, MoveRight, TwitterIcon } from 'lucide-react';
 
 const Hero2 = () => {
          const images = [
@@ -64,14 +68,14 @@ const Hero2 = () => {
            setTranslateX(0); // Reset position
          };
        
-         const goToSlide = (index) => {
-           setCurrentSlide(index);
-           setTranslateX(0);
-         };
+        //  const goToSlide = (index) => {
+        //    setCurrentSlide(index);
+        //    setTranslateX(0);
+        //  };
        
          return (
            <div 
-             className="h-screen relative home-2 overflow-hidden md:px-10 px-3 "
+             className="h-screen  relative home-2 overflow-hidden md:px-10 px-0 "
              ref={sliderRef}
              onMouseDown={handleDragStart}
              onMouseMove={handleDragMove}
@@ -82,7 +86,7 @@ const Hero2 = () => {
              onTouchEnd={handleDragEnd}
            >
              <div
-               className="h-full pt-12 md:pt-5 p-8 flex md:flex-row md:justify-between  flex-col bg-cover bg-center object-cover transition-all duration-500 ease-in-out"
+               className="h-full pt-5.5 p-8 flex md:flex-row md:justify-between  flex-col bg-cover bg-center object-cover transition-all duration-500 ease-in-out"
                style={{ 
                  backgroundImage: `url(${images[currentSlide]})`,
                  transform: `translateX(${translateX}px)`,
@@ -91,10 +95,10 @@ const Hero2 = () => {
              >
                <div className="h-fit  flex items-center mb-3 md:mb-0 justify-center text-white">
                  <div className="md:text-start text-center">
-                   <h1 className="md:text-[64px] text-2xl leading-6 md:leading-12 font-semibold sm:max-w-[300px] md:max-w-[560px] mb-4">
+                   <h1 className="md:text-[64px] text-2xl leading-6 md:leading-12 font-semibold sm:max-w-[300px] md:max-w-[560px] md:mb-4 mb-2">
                      Master the Art of Professional Excellence
                    </h1>
-                   <p className="sm:text-lg text-sm font-medium md:text-2xl sm:max-w-[300px] md:max-w-[560px]">
+                   <p className="sm:text-lg text-base font-medium md:text-2xl sm:max-w-[300px] md:max-w-[560px] mb-3 md:mb-0">
                    Join the leading Etiquette & Management School <br />
                    and elevate your personal & corporate presence
                    </p>
@@ -117,16 +121,32 @@ const Hero2 = () => {
                </div>
              </div>
        
-             <div className="absolute bottom-5 left-1/2  transform -translate-x-1/2 flex space-x-2">
-               {images.map((_, index) => (
-                 <button
-                   key={index}
-                   onClick={() => goToSlide(index)}
-                   className={`w-3 h-3 rounded-full border-[#C3AA8C] border-2 ${
-                     currentSlide === index ? 'bg-[#C3AA8C]' : 'bg-white'
-                   }`}
-                 />
-               ))}
+             <div className="absolute block w-full bottom-0 md:bottom-6 left-0  z-10 ">
+               <div className='flex  w-[100%] md:w-[92%] mx-auto gap-5 bg-[#F1ECE3] flex-wrap md:px-7 px-4 md:py-5 py-2 justify-between items-center '>
+                      <div className='flex w-full md:border-b-0 border-b-2 border-b-[#333333] gap-3 gap-x-2 items-center pb-2  md:w-fit '>
+                       <div>
+                           <Book size={30} color='#193728' className=' mb-1'/>
+                           <p className='md:text-2xl text-lg  text-[#333333] font-bold'>Explore Courses</p>
+                           <p className='text-[#333333] font-normal text-[14px] md:text-[16px]'>Lorem ipsum dolor sit amet consectetur.</p>
+                       </div>
+                       </div> 
+                       <img src={vertical} alt="ing" className='hidden md:block' />     
+                      <div className='flex md:border-b-0 w-full md:w-fit border-b-2 border-b-[#333333] gap-3 pb-2  gap-x-2 items-center'>
+                       <div>
+                           <FolderOpenDotIcon  size={30} color='#193728' className=' mb-1'/>
+                           <p className='md:text-2xl text-lg  text-[#333333] font-bold'>Browse Resources</p>
+                           <p className='text-[#333333] font-normal text-[14px] md:text-[16px]'>Lorem ipsum dolor sit amet consectetur.</p>
+                       </div>
+                       </div>
+                       <img src={vertical} alt="ing" className='hidden md:block' />      
+                      <div className='flex md:border-b-0 w-full md:w-fit border-b-2 border-b-[#333333] gap-3 pb-2 gap-x-2 items-center'>
+                       <div>
+                           <GraduationCapIcon size={30} color='#193728' className=' mb-1'/>
+                           <p className='md:text-2xl text-lg  text-[#333333] font-bold'>Explore Events</p>
+                           <p className='text-[#333333] font-normal text-[14px] md:text-[16px]'>Lorem ipsum dolor sit amet consectetur.</p>
+                       </div>
+                       </div>      
+                   </div>
              </div>
     </div>
   )
