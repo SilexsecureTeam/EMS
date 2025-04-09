@@ -4,10 +4,10 @@ import { MoveRightIcon } from 'lucide-react';
 
 const Program2 = () => {
   return (
-    <div className='md:p-10'>
+    <div className='md:p-10 py-10'>
       <div className="bg-[#C3AA8C] p-9 md:px-9 px-4 rounded-sm">
         <div className="flex flex-col text-center gap-2 md:text-start md:flex-row md:justify-between justify-center item-center">
-            <h1 className='font-bold md:max-w-[360px] w-full text-2xl md:text-[40px] lg:text-[48px]'>We have the best-in- 
+            <h1 className='font-bold md:max-w-[550px] w-full text-2xl md:text-[40px] lg:text-[48px]'>We have the best-in- 
             Etiquette programs</h1>
             <div className="md:max-w-[360px] w-full  flex flex-col justify-center">
                 <p className='text-[16px] mb-3 font-light'>Lorem ipsum dolor sit amet consectetur. Pretium mattis semper massa pharetra enim. Nulla di.</p>
