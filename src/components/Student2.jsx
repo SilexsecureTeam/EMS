@@ -15,19 +15,19 @@ const Student2 = () => {
             <h2 className="font-semibold text-[#333333] text-24"> World-class teachers</h2>
             <MoveUpIcon className='text-[#6C4F40]  rounded-full border-1 border-[#6C4F40] p-1  cursor-pointer' size={23} />
          </div>
-         <p className='font-normal text-[16px] mb-2.5 md:max-w-[385px] max-w-[320px] text-[#333333]'>Lorem ipsum dolor sit amet consectetur in in dignissim vulputate lectus enim diam placerat praesent diam nisl eu duis hendrerit in</p>
+         <p className='font-normal text-[16px] mb-2.5 md:max-w-[385px] max-w-[280px] text-[#333333]'>Lorem ipsum dolor sit amet consectetur in in dignissim vulputate lectus enim diam placerat praesent diam nisl eu duis hendrerit in</p>
          <hr className='w-full h-[1px] opacity-40 mb-5 bg-[#000000]'/>
          <div className="flex justify-between mb-3.5 item-center">
             <h2 className="font-semibold text-[#333333] text-24"> Well-equipped facilities</h2>
             <MoveUpIcon className='text-[#6C4F40]  rounded-full border-1 border-[#6C4F40] p-1  cursor-pointer' size={23} />
          </div>
-         <p className='font-normal text-[16px] mb-2.5 md:max-w-[385px] max-w-[320px] text-[#333333]'>Lorem ipsum dolor sit amet consectetur in in dignissim vulputate lectus enim diam placerat praesent diam nisl eu duis hendrerit in.</p>
+         <p className='font-normal text-[16px] mb-2.5 md:max-w-[385px] max-w-[280px] text-[#333333]'>Lorem ipsum dolor sit amet consectetur in in dignissim vulputate lectus enim diam placerat praesent diam nisl eu duis hendrerit in.</p>
          <hr className='w-full h-[1px] opacity-40 mb-5 bg-[#000000]'/>
          <div className="flex justify-between mb-3.5 item-center">
             <h2 className="font-semibold text-[#333333] text-24"> A lifetime of connection</h2>
             <MoveUpIcon className='text-[#6C4F40]  rounded-full border-1 border-[#6C4F40] p-1  cursor-pointer' size={23} />
          </div>
-         <p className='font-normal text-[16px] mb-2.5 md:max-w-[385px] max-w-[320px] text-[#333333]'>Lorem ipsum dolor sit amet consectetur in in dignissim vulputate lectus enim diam placerat praesent diam nisl eu duis hendrerit in.</p>
+         <p className='font-normal text-[16px] mb-2.5 md:max-w-[385px] max-w-[280px] text-[#333333]'>Lorem ipsum dolor sit amet consectetur in in dignissim vulputate lectus enim diam placerat praesent diam nisl eu duis hendrerit in.</p>
          {/* <hr className='w-full h-[1px] opacity-40 mb-5 bg-[#000000]'/> */}
         </div>   
         </div>
