@@ -37,7 +37,7 @@ const Management2 = () => {
       ];
 
   return (
-    <div className='bg-[#CFBDA2] sm:px-20 px-8 py-30 text-center'>
+    <div className=' sm:px-20 px-8 py-30 text-center'>
      <h1 className='mb-3 text-[#333333] font-semibold text-4xl'>The Etiquette & Management Programs</h1>
      <p className='mb-8 text-lg'>Lorem ipsum dolor sit amet consectetur, sit amet sit amet</p> 
       <div className="flex flex-wrap -mx-2">

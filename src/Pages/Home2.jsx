@@ -3,6 +3,7 @@ import Header2 from '../components/Header2'
 import Hero2 from '../components/Hero2'
 import Misson2 from '../components/Mission2'
 import Management2 from '../components/Management2'
+import Program2 from '../components/Program2'
 
 const Home2 = () => {
   return (
@@ -11,6 +12,7 @@ const Home2 = () => {
       <Hero2 />
       <Misson2 />
       <Management2 />
+      <Program2 />
     </div>
   )
 }
