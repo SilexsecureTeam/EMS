@@ -9,8 +9,8 @@ const Student2 = () => {
             stand out from the rest</h1>
                 <p className='text-[16px] mx-auto block text-center md:max-w-[675px] w-full mb-3 font-light'>Lorem ipsum dolor sit amet consectetur in in dignissim vulputate lectus enim diam placerat praesent diam nisl eu duis hendrerit in vivamus ligula.</p>    
         <div className="relative w-full h-[600px] mt-10">
-        <img src={woman} alt="img" className='w-full object-fill pl-5 h-full rounded-lg ' />
-        <div className="absolute md:bottom-15 bottom-8 -right-1 bg-white rounded-sm p-5 pt-10 max-w-[510px]">
+        <img src={woman} alt="img" className='w-full object-fill h-full rounded-lg ' />
+        <div className="absolute md:bottom-15 bottom-8 -right-1  bg-white rounded-sm p-5 pt-10 max-w-[510px]">
          <div className="flex justify-between mb-3.5 item-center">
             <h2 className="font-semibold text-[#333333] text-24"> World-class teachers</h2>
             <MoveUpIcon className='text-[#6C4F40]  rounded-full border-1 border-[#6C4F40] p-1  cursor-pointer' size={23} />
