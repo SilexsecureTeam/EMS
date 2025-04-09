@@ -23,7 +23,7 @@ const Program2 = () => {
             <h1 className="text-[36px] font-semibold text-[#333333]">Student</h1>
             <p className="text-[16px] mb-3 font-light text-[#333333]">Lorem ipsum dolor sit amet consectetur. Pretium mattis semper massa pharetra </p>
             <hr className='w-full h-0.5 bg-[#333333]'/>
-            <div className="flex justify-start mt-4">
+            <div className="flex justify-start gap-x-2 mt-4">
                 <div>
                 <div className="font-semibold text-[38px] mb-3">
                     50<span className='text-[#AD8862]'>+</span>
