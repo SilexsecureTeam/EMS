@@ -6,6 +6,7 @@ import Management2 from '../components/Management2'
 import Program2 from '../components/Program2'
 import Student2 from '../components/Student2'
 import College2 from '../components/College2'
+import Differnt2 from '../components/Differnt2'
 
 const Home2 = () => {
   return (
@@ -17,6 +18,7 @@ const Home2 = () => {
       <Program2 />
       <Student2 />
       <College2 />
+      <Differnt2 />
     </div>
   )
 }
