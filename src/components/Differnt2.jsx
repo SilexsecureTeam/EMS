@@ -33,7 +33,7 @@ const Differnt2 = () => {
                 <p className="text-[#333333] font-semibold text-[20px]"> Personalised business service</p>
             </div>
             <p className="text-base font-normal mb-3">Lorem ipsum dolor sit amet consectetu</p>
-                   <button className="mt-3 bg-[#193728] text-[21px] font-semibold cursor-pointer text-white px-3 py-1.5">
+                   <button className="mt-3 ml-3 bg-[#193728] text-[21px] font-semibold cursor-pointer text-white px-3 py-1.5">
                      Enroll Now
                    </button>
           </div>
