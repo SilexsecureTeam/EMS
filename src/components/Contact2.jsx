@@ -6,7 +6,7 @@ import React from 'react'
 
 const Contact2 = () => {
   return (
-    <div className='flex con gap-5 next flex-wrap px-7 justify-between items-center '>
+    <div className='flex con gap-5 bg-[#B0AFAF] next flex-wrap px-7 justify-between items-center '>
        <div className='flex gap-x-2 items-center '>
         <img src={location} alt="img" className='h-[40px]'  />
         <div>

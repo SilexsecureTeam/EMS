@@ -12,6 +12,7 @@ import New2 from '../components/New2'
 import Visit2 from '../components/Visit2'
 import Follow2 from '../components/Follow2'
 import Contact2 from '../components/Contact2'
+import Footer2 from '../components/Footer2'
 
 const Home2 = () => {
   return (
@@ -29,6 +30,7 @@ const Home2 = () => {
       <Visit2 />
       <Follow2 />
       <Contact2 />
+      <Footer2 />
     </div>
   )
 }
