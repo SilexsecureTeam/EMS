@@ -8,6 +8,7 @@ import Student2 from '../components/Student2'
 import College2 from '../components/College2'
 import Differnt2 from '../components/Differnt2'
 import Enroll2 from '../components/Enroll2'
+import New2 from '../components/New2'
 
 const Home2 = () => {
   return (
@@ -21,6 +22,7 @@ const Home2 = () => {
       <College2 />
       <Differnt2 />
       <Enroll2 />
+      <New2 />
     </div>
   )
 }

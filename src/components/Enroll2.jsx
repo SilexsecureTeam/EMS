@@ -4,7 +4,7 @@ import waiter from '../assets/champagne.png'
 
 const Enroll2 = () => {
   return (
-    <div className='py-10 px-3 md:px-10 '>
+    <div className='py-10 px-0 md:px-10 '>
       <div className="bg-[#CFBDA2] w-full h-fit py-9 md:px-10 px-2.5">
       <h1 className='font-semibold mb-3 text-[#333333] text-center w-full text-2xl md:text-[36px] lg:text-[48px]'>What our students say</h1>
       <p className='font-normal block mb-5 mx-auto text-center text-[#333333] max-w-[678px] text-base'>Lorem ipsum dolor sit amet consectetur in in dignissim vulputate lectus enim  placerat praesent diam nisl eu duis hendrerit in v.</p>

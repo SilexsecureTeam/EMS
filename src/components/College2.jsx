@@ -5,7 +5,7 @@ import play from '../assets/play.png'
 
 const College2 = () => {
   return (
-    <div className='py-10 px-3 md:px-10 '>
+    <div className='py-10 px-0 md:px-10 '>
       <div className='flex md:flex-row flex-col gap-5 justify-between p-8 md:px-8 px-4 pb-15 bg-[#E2D8C6]'>
         <div className="flex flex-col gap-10 justify-end md:max-w-[550px] w-full mx-auto">
         <h1 className='font-semibold md:text-start flex items-center text-center md:max-w-[550px] w-full text-2xl md:text-[36px] lg:text-[48px]'>Watch what a day in our college look like</h1>
