@@ -13,10 +13,10 @@ const New2 = () => {
                    </button> 
       </div>
       <div className="flex md:flex-row gap-4 gap-x-4 flex-col">
-        <div className='w-full  relative max-h-[515px]'>
+        <div className='w-full  relative max-h-[515px] min-h-[400px]'>
          <img src={maid} alt="i" className=' w-full h-full' />
          <div className=" absolute bottom-2 left-2 bg-[#CFBDA2] pl-10 py-3">
-          <p className="max-w-[429px] mb-2 font-semibold text-[26px]">How to make your etiquette training application stand out</p>
+          <p className="max-w-[429px] mb-2 font-semibold text-[20px] sm:text-[26px]">How to make your etiquette training application stand out</p>
           <div className="flex gap-x-5 mb-4 w-full items-center">
           <button className="block rounded-sm bg-[#193728] text-[14px] font-semibold cursor-pointer text-white px-3 py-1.5">
                      Managment
