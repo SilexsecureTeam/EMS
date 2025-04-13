@@ -1,37 +1,40 @@
-import location from '../assets/location.png'
-import phone from '../assets/phone.png'
-import mail from '../assets/mail.png'
-import vertical from '../assets/vertical.png'
-import React from 'react'
+import { MapPin, Phone, Mail } from 'lucide-react';
 
 const Contact = () => {
   return (
-    <div className='flex con gap-5 next flex-wrap px-7 justify-between items-center '>
-       <div className='flex gap-x-2 items-center '>
-        <img src={location} alt="img" className='h-[40px]'  />
-        <div>
-            <p>Address:</p>
-            <h2 className='font-bold text-[15px]'>Plot 25 Kunle street, Abuja</h2>
+    <div className="bg-gray-200 px-4 py-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-gray-400">
+        
+        {/* Address */}
+        <div className="flex items-center gap-4 px-4 py-4">
+          <MapPin className="text-gray-700 shrink-0" />
+          <div>
+            <p className="text-sm text-gray-500">Address</p>
+            <p className="font-semibold text-gray-800">Plot 25 Kunle Street, Abuja</p>
+          </div>
         </div>
-        </div> 
-        <img src={vertical} alt="ing" className='hidden md:block' />     
-       <div className='flex gap-x-2 items-center'>
-        <img src={phone} alt="img" className='h-[40px]' />
-        <div>
-            <p>Phone:</p>
-            <h2 className='font-bold text-[]15px'>(+234) 805 784 511</h2>
-        </div>
-        </div>
-        <img src={vertical} alt="ing" className='hidden md:block' />      
-       <div className='flex gap-x-2 items-center'>
-        <img src={mail} alt="img" className='h-[40px]' />
-        <div>
-            <p>Email:</p>
-            <h2 className='font-bold text-[15px]'>info@gmail.com</h2>
-        </div>
-        </div>      
-    </div>
-  )
-}
 
-export default Contact
+        {/* Phone */}
+        <div className="flex items-center gap-4 px-4 py-4">
+          <Phone className="text-gray-700 shrink-0" />
+          <div>
+            <p className="text-sm text-gray-500">Phone</p>
+            <p className="font-semibold text-gray-800">(+234) 805 784 511</p>
+          </div>
+        </div>
+
+        {/* Email */}
+        <div className="flex items-center gap-4 px-4 py-4">
+          <Mail className="text-gray-700 shrink-0" />
+          <div>
+            <p className="text-sm text-gray-500">Email</p>
+            <p className="font-semibold text-gray-800">info@gmail.com</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  );
+};
+
+export default Contact;
