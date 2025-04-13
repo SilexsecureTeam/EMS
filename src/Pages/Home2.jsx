@@ -9,6 +9,7 @@ import College2 from '../components/College2'
 import Differnt2 from '../components/Differnt2'
 import Enroll2 from '../components/Enroll2'
 import New2 from '../components/New2'
+import Visit2 from '../components/Visit2'
 
 const Home2 = () => {
   return (
@@ -23,6 +24,7 @@ const Home2 = () => {
       <Differnt2 />
       <Enroll2 />
       <New2 />
+      <Visit2 />
     </div>
   )
 }
