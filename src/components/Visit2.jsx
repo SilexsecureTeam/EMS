@@ -3,7 +3,7 @@ import React from 'react';
 
 const Visit2 = () => {
   return (
-    <div className="py-10 px-4 sm:px-7 bg-gray-100 min-h-screen">
+    <div className="py-10 px-2 sm:px-7 bg-gray-100 min-h-screen">
       <div className="bg-[#E7E7E7] py-10 px-4 sm:px-7 rounded-lg shadow-md max-full mx-auto">
         <div className=" grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Form Section */}
