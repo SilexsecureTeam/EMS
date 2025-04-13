@@ -13,7 +13,7 @@ const New2 = () => {
                    </button> 
       </div>
       <div className="flex md:flex-row gap-4 gap-x-4 flex-col">
-        <div className='w-full  relative max-h-[515px] min-h-[400px]'>
+        <div className='w-full  relative'>
          <img src={maid} alt="i" className=' w-full h-full' />
          <div className=" absolute bottom-2 left-2 bg-[#CFBDA2] pl-10 py-3">
           <p className="max-w-[429px] mb-2 font-semibold text-[20px] sm:text-[26px]">How to make your etiquette training application stand out</p>
