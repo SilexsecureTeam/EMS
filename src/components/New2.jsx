@@ -32,9 +32,9 @@ const New2 = () => {
           <div className='w-full'>
             <div className="flex justify-between mb-4 w-full items-center">
                <p className='text-[#333333] font-semibold text-[28px]'>Upcoming Events</p>
-               <div className="flex gap-x-2">
-                <p className='text-base font-semibold text-[16px]'>Browse all</p>
-                <ChevronRightIcon size={25} color='#333333' />
+               <div className="flex items-center gap-x-2">
+                <p className='text-base font-semibold text-[13px] sm:text-[16px]'>Browse all</p>
+                <ChevronRightIcon size={22} color='#333333' />
                </div>
             </div>
             <hr className='w-full border-1 border-[#333333]'/>
@@ -42,7 +42,7 @@ const New2 = () => {
           <div className='w-full mt-6'>
             <h2 className='mb-3 text-[#333333] font-semibold text-[22px]'>The Art of Modern Etiquette </h2>
             <div className="flex justify-between mb-2 w-full items-center">
-               <p className='text-[#333333] font-light text-[16px]'>Lorem ipsum dolor sit amet consectetur ine </p>
+               <p className='text-[#333333] font-light text-[13px] sm:text-[16px]'>Lorem ipsum dolor sit amet consectetur ine </p>
                <MoveRight  size={24} color='#333333' className='p-1 rounded-full border-1 border-[#333333]'/>
             </div>
             <div className="flex mb-6 items-center gap-x-8">
@@ -60,7 +60,7 @@ const New2 = () => {
           <div className='w-full mt-6'>
             <h2 className='mb-3 text-[#333333] font-semibold text-[22px]'>The Art of Modern Etiquette </h2>
             <div className="flex justify-between mb-2 w-full items-center">
-               <p className='text-[#333333] font-light text-[16px]'>Lorem ipsum dolor sit amet consectetur ine </p>
+               <p className='text-[#333333] font-light text-[13px] sm:text-[16px]'>Lorem ipsum dolor sit amet consectetur ine </p>
                <MoveRight  size={24} color='#333333' className='p-1 rounded-full border-1 border-[#333333]'/>
             </div>
             <div className="flex mb-6 items-center gap-x-8">
@@ -78,7 +78,7 @@ const New2 = () => {
           <div className='w-full mt-6'>
             <h2 className='mb-3 text-[#333333] font-semibold text-[22px]'>The Art of Modern Etiquette </h2>
             <div className="flex justify-between mb-2 w-full items-center">
-               <p className='text-[#333333] font-light text-[16px]'>Lorem ipsum dolor sit amet consectetur ine </p>
+               <p className='text-[#333333] font-light text-[13px] sm:text-[16px]'>Lorem ipsum dolor sit amet consectetur ine </p>
                <MoveRight  size={24} color='#333333' className='p-1 rounded-full border-1 border-[#333333]'/>
             </div>
             <div className="flex mb-6 items-center gap-x-8">
