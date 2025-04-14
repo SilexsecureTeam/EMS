@@ -63,10 +63,10 @@ const Hero3 = () => {
     setTranslateX(0); // Reset position
   };
 
-  const goToSlide = (index) => {
-    setCurrentSlide(index);
-    setTranslateX(0);
-  };
+  // const goToSlide = (index) => {
+  //   setCurrentSlide(index);
+  //   setTranslateX(0);
+  // };
 
   return (
     <div 
@@ -104,7 +104,7 @@ const Hero3 = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-5 left-1/2  transform -translate-x-1/2 flex space-x-2">
+      {/* <div className="absolute bottom-5 left-1/2  transform -translate-x-1/2 flex space-x-2">
         {images.map((_, index) => (
           <button
             key={index}
@@ -114,7 +114,7 @@ const Hero3 = () => {
             }`}
           />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };
