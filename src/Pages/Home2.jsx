@@ -16,7 +16,7 @@ import Footer2 from '../components/Footer2'
 
 const Home2 = () => {
   return (
-    <div className='bg-gray-100'>
+    <div className='bg-gray-100 home-2'>
       <Header2 />
       <Hero2 />
       <Misson2 />

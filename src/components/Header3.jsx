@@ -55,7 +55,7 @@ const Header3 = () => {
            <a href="#" className="flex items-center gap-x-1 font-semibold lg:text-[16px] text-[14px] justify-between text-white">
              Projects <img src={vec} alt="vector" className='cursor-pointer pl-1' /> </a>
            {isSubprojectOpen && (
-             <ul className="absolute left-0 top-full w-[80px] z-40 bg-white rounded-md shadow-lg py-1">
+             <ul className="absolute left-0 top-full w-[100px] z-40 bg-white rounded-md shadow-lg py-1">
                <li> <a href="#" className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">Projects 1 </a> </li>
                <li> <a href="#" className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">Projects 2 </a> </li>
                <li> <a href="#" className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">Projects 3 </a> </li>
@@ -68,7 +68,7 @@ const Header3 = () => {
            <a href="#" className="flex items-center gap-x-1 font-semibold lg:text-[16px] text-[14px] justify-between text-white">
              Pages <img src={vec} alt="vector" className='cursor-pointer pl-1' /> </a>
            {isSubpageOpen && (
-             <ul className="absolute left-0 top-full w-[110px] z-40 bg-white rounded-md shadow-lg py-1">
+             <ul className="absolute left-0 top-full w-[80px] z-40 bg-white rounded-md shadow-lg py-1">
                <li> <a href="#" className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">Pages 1 </a> </li>
                <li> <a href="#" className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">Pages 2 </a> </li>
                <li> <a href="#" className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">Pages 3 </a> </li>
