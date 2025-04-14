@@ -155,7 +155,7 @@ const Header = () => {
                        <ul className='pl-4 bg-gray-50'>
                          <li><NavLink to='/' className='block px-4 py-2 hover:bg-[#C3AA8C]'>Home 1</NavLink></li>
                          <li><NavLink to='/home2' className='block px-4 py-2 hover:bg-[#C3AA8C]'>Home 2</NavLink></li>
-                         <li><a href='#' className='block px-4 py-2 hover:bg-[#C3AA8C]'>Home 3</a></li>
+                         <li><a href='/home3' className='block px-4 py-2 hover:bg-[#C3AA8C]'>Home 3</a></li>
                        </ul>
                      )}
                    </li>
@@ -245,7 +245,7 @@ const Header = () => {
                     Home 1 </a> </li> 
                     <li> <NavLink to='/home2' className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">
                     Home 2 </NavLink> </li>
-                <li> <a href="#" className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">
+                <li> <a href="/home3" className="block px-2 py-2 text-[#333333] hover:bg-[#C3AA8C]">
                     Home 3 </a> </li>
               </ul>
             )}
