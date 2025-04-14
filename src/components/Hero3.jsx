@@ -91,7 +91,7 @@ const Hero3 = () => {
         <div className="h-full bg-black/50 px-10 flex items-center justify-center text-white">
           <div className="text-center">
             <p className='text-[15px] font-normal mb-4'>Lets Get Started</p>
-            <h1 className="md:text-4xl lg:text-[60px] text-2xl font-bold sm:max-w-[300px] md:max-w-[560px] lg:max-w-[810px] mb-4">
+            <h1 className="md:text-4xl lg:text-[60px] text-2xl font-black sm:max-w-[300px] md:max-w-[560px] lg:max-w-[810px] mb-4">
             Smart Partner For To Grow Your Best Business
             </h1>
             <p className="sm:text-[17px] text-sm font-normal block mx-auto sm:max-w-[340px] md:max-w-[660px]">
