@@ -4,6 +4,7 @@ import Hero3 from '../components/Hero3'
 import Digital3 from '../components/Digital3'
 import Business3 from '../components/Business3'
 import Customer3 from '../components/Customer3'
+import Value3 from '../components/Value3'
 
 const Home3 = () => {
   return (
@@ -13,6 +14,7 @@ const Home3 = () => {
       <Digital3 />
       <Business3 />
       <Customer3 />
+      <Value3 />
     </div>
   )
 }
