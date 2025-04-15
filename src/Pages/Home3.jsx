@@ -8,6 +8,7 @@ import Value3 from '../components/Value3'
 import Traffic3 from '../components/Traffic3'
 import Growth3 from '../components/Growth3'
 import Organic3 from '../components/Organic3'
+import Testimonial3 from '../components/Testimonial3'
 
 const Home3 = () => {
   return (
@@ -21,6 +22,7 @@ const Home3 = () => {
       <Traffic3 />
       <Growth3 />
       <Organic3 />
+      <Testimonial3 />
     </div>
   )
 }
