@@ -1,6 +1,6 @@
 import React from 'react'
 import mixing from '../assets/mixing.jpg'
-import { CheckCircle } from "lucide-react";
+import { CheckIcon } from "lucide-react";
 
 const Customer3 = () => {
   return (
@@ -37,7 +37,7 @@ const Customer3 = () => {
             {["Website Ready", "All in Audience", "Digital Marketing"].map(
               (item, index) => (
                 <li key={index} className="flex items-center font-medium text-[17px] text-[#6E6E6E]">
-                  <CheckCircle className="w-5 h-5 text-emerald-600 mr-2" />
+                  <CheckIcon className="w-5 h-5 font-bold text-[#193728] mr-2" />
                   {item}
                 </li>
               )
