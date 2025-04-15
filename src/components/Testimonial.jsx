@@ -171,7 +171,7 @@ const Testimonial = () => {
             <button
               key={i}
               onClick={() => goToIndex(i * cardsPerView)}
-              className={`w-2 h-2 rounded-full mx-1 transition-colors bg-white border-2 border-[#193728] duration-300 ${
+              className={`w-4 h-4 rounded-full mx-1 transition-colors border-2 border-[#193728] duration-300 ${
                 isActive ? 'bg-[#193728]' : 'bg-white'
               }`}
               aria-label={`Go to slide ${i + 1}`}
