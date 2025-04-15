@@ -136,7 +136,7 @@ const Testimonial3 = () => {
       <button
         key={index}
         onClick={() => setCurrentIndex(index)}
-        className={`w-4 h-4 rounded-full mx-1 transition-colors bg-white border-2 border-[#E2D8C6] cursor-pointer duration-300 ${
+        className={`w-4 h-4 rounded-full mx-1 transition-colors border-2 border-[#E2D8C6] cursor-pointer duration-300 ${
           currentIndex === index ? 'bg-[#E2D8C6]' : 'bg-white'
         }`}
         aria-label={`Go to slide ${index + 1}`}
