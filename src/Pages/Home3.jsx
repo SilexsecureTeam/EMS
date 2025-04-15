@@ -7,6 +7,7 @@ import Customer3 from '../components/Customer3'
 import Value3 from '../components/Value3'
 import Traffic3 from '../components/Traffic3'
 import Growth3 from '../components/Growth3'
+import Organic3 from '../components/Organic3'
 
 const Home3 = () => {
   return (
@@ -19,6 +20,7 @@ const Home3 = () => {
       <Value3 />
       <Traffic3 />
       <Growth3 />
+      <Organic3 />
     </div>
   )
 }
