@@ -6,7 +6,7 @@ import { Play } from "lucide-react";
 // Main component
 const Growth3 = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white py-4">
+    <div className=" flex items-center justify-center bg-white py-10">
       <div className="relative w-full h-[400px] ">
                 {/* Background box */}
      <div className='relative sm:w-[52%] h-[60%] w-[80%] sm:h-[80%]'>
