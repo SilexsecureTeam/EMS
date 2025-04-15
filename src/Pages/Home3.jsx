@@ -6,6 +6,7 @@ import Business3 from '../components/Business3'
 import Customer3 from '../components/Customer3'
 import Value3 from '../components/Value3'
 import Traffic3 from '../components/Traffic3'
+import Growth3 from '../components/Growth3'
 
 const Home3 = () => {
   return (
@@ -17,6 +18,7 @@ const Home3 = () => {
       <Customer3 />
       <Value3 />
       <Traffic3 />
+      <Growth3 />
     </div>
   )
 }

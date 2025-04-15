@@ -15,7 +15,7 @@ const Customer3 = () => {
             alt="Salad preparation"
             className="absolute left-0 top-0 z-10 w-[80%] h-[80%]  object-cover"
           />
-          <div className="absolute bottom-6 right-6 border-1 border-[#000000] w-4/5 h-4/5 bg-[#CFBDA2] "></div>
+          <div className="absolute bottom-0 right-0 border-1 border-[#000000] w-4/5 h-4/5 bg-[#CFBDA2] "></div>
         </div>
 
         {/* Text Content */}
