@@ -11,6 +11,7 @@ import Organic3 from '../components/Organic3'
 import Testimonial3 from '../components/Testimonial3'
 import Footer3 from '../components/Footer3'
 import Team3 from '../components/Team3'
+import Faq3 from '../components/Faq3'
 
 const Home3 = () => {
   return (
@@ -26,6 +27,7 @@ const Home3 = () => {
       <Organic3 />
       <Team3 />
       <Testimonial3 />
+      <Faq3 />
       <Footer3 />
     </div>
   )
