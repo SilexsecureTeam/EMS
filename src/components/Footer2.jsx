@@ -20,7 +20,7 @@ mfacilisi cras fermentum odio eu.</p>
       </div>
       <div className=' mb-8'>
         <h2 className='text-[16px] text-black font-bold mb-4.5'>Our Services:</h2>
-        <ul className='grid gap-3.5 text-[#333333] text-[14px]'>
+        <ul className='grid gap-3.5 font-normal text-[#333333] text-[14px]'>
             <li><a href="#">Scelerisque pharetra</a></li>
             <li><a href="#">Lorem ipsum </a></li>
             <li><a href="#">Management</a></li>
@@ -30,11 +30,11 @@ mfacilisi cras fermentum odio eu.</p>
       </div>
       <div className=''>
         <h2 className='text-[16px] text-black font-bold mb-2'>Subscribe</h2>
-        <input type="text" placeholder='Enter your mail' className='text-black text-xl py-2 px-1 mb-4 w-full outline-none bg-[#E7E7E7]'/>
-        <button className='bg-[#193728] px-3 py-1.5 cursor-pointer'>SUBSCRIBE NOW</button>
+        <input type="text" placeholder='Enter your mail' className='text-black font-medium text-xl py-2 px-1 mb-4 w-full outline-none bg-[#E7E7E7]'/>
+        <button className='bg-[#193728] px-3 py-1.5 font-normal cursor-pointer'>SUBSCRIBE NOW</button>
       </div>
       </div>
-       <h2 className='text-center pt-5 pb-1 bg-[#B0AFAF]'>Copyright &copy; 2024  <b>EMS</b>  || All Rights Reserved</h2>
+       <h2 className='text-center pt-5 pb-1 font-normal bg-[#B0AFAF]'>Copyright &copy; 2024  <b>EMS</b>  || All Rights Reserved</h2>
     </div>
   )
 }

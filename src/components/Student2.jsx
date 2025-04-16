@@ -32,7 +32,7 @@ const Student2 = () => {
         </div>   
         </div>
         <div className="flex justify-center gap-x-2 mt-5 items-center">
-            <button className='bg-[#193728] text-white rounded-[10px] py-2 px-5'>Enroll Now</button>
+            <button className='bg-[#193728] font-medium text-white rounded-[10px] py-2 px-5'>Enroll Now</button>
             <p className='text-[#333333] font-semibold text-base items-center gap-x-2 flex'>View Program <MoveRightIcon size={20} className='text-[#6C4F40]  rounded-full border-1 border-[#6C4F40] p-1  cursor-pointer' /> </p>
         </div>
     </div>

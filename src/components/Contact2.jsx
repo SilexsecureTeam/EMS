@@ -7,27 +7,27 @@ const Contact2 = () => {
         
         {/* Address */}
         <div className="flex items-center gap-4 px-4 py-4">
-          <MapPin className="text-gray-700 shrink-0" />
+          <MapPin className="text-[#333333] shrink-0 p-2 w-10 h-10 rounded-full border-2" />
           <div>
-            <p className="text-sm text-gray-500">Address</p>
+            <p className="text-sm font-medium text-gray-500">Address</p>
             <p className="font-semibold text-gray-800">Plot 25 Kunle Street, Abuja</p>
           </div>
         </div>
 
         {/* Phone */}
         <div className="flex items-center gap-4 px-4 py-4">
-          <Phone className="text-gray-700 shrink-0" />
+          <Phone className="text-[#333333] shrink-0 p-2 w-10 h-10 rounded-full border-2" />
           <div>
-            <p className="text-sm text-gray-500">Phone</p>
+            <p className="text-sm font-medium text-gray-500">Phone</p>
             <p className="font-semibold text-gray-800">(+234) 805 784 511</p>
           </div>
         </div>
 
         {/* Email */}
         <div className="flex items-center gap-4 px-4 py-4">
-          <Mail className="text-gray-700 shrink-0" />
+          <Mail className="text-[#333333] shrink-0 p-2 w-10 h-10 rounded-full border-2" />
           <div>
-            <p className="text-sm text-gray-500">Email</p>
+            <p className="text-sm font-medium text-gray-500">Email</p>
             <p className="font-semibold text-gray-800">info@gmail.com</p>
           </div>
         </div>

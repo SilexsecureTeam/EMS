@@ -20,11 +20,11 @@ const New2 = () => {
 
         <div className="flex flex-col md:flex-row gap-6">
           {/* Featured Article */}
-          <div className="w-full relative rounded-lg overflow-hidden shadow-md">
+          <div className="w-full relative rounded-lg overflow-hidden ">
             <img
               src={maid}
               alt="Chambermaid working"
-              className="w-full h-64 sm:h-80 md:h-[475px] object-cover"
+              className="w-full h-64 sm:h-80 md:h-full object-cover"
             />
             <div className="absolute md:bottom-5 md:left-5 bottom-2 left-2 bg-[#CFBDA2] p-4 sm:p-6">
               <p className="max-w-[429px] mb-2 font-semibold text-[18px] sm:text-[22px] md:text-[24px] text-[#333333]">

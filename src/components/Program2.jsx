@@ -9,10 +9,10 @@ const Program2 = () => {
         <div className="flex flex-col text-center gap-2 md:text-start md:flex-row md:justify-between justify-center item-center">
             <h1 className='font-bold md:max-w-[550px] w-full text-2xl md:text-[40px] lg:text-[48px]'>We have the best-in- 
             Etiquette programs</h1>
-            <div className="md:max-w-[360px] w-full  flex flex-col justify-center">
-                <p className='text-[16px] mb-3 font-light'>Lorem ipsum dolor sit amet consectetur. Pretium mattis semper massa pharetra enim. Nulla di.</p>
-                <div className="p-3 5 flex bg-white justify-between items-center  h-[50px]">
-                    <button className='bg-[#193728] text-white rounded-[10px] py-2 px-5'>student</button>
+            <div className="md:max-w-[389px] w-full  flex flex-col justify-center">
+                <p className='text-[16px] mb-3 font-normal'>Lorem ipsum dolor sit amet consectetur. Pretium mattis semper massa pharetra enim. Nulla di.</p>
+                <div className="py-3 px-1 flex bg-white justify-between items-center  h-[50px]">
+                    <button className='bg-[#193728] text-white rounded-[5px] py-2 px-5'>student</button>
                     <p className='text-[16px] font-semibold text-[#333333]'>Parent or Employer </p>
                 </div>
             </div>
