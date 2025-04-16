@@ -17,7 +17,7 @@ const Visit2 = () => {
                   <input
                     id="fullName"
                     type="text"
-                    className="w-full bg-[#d1d1d1] text-[16px] py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#193728] transition"
+                    className="w-full bg-[#d1d1d1] font-medium text-[16px] py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#193728] transition"
                     placeholder="Grace Henry"
                     required
                   />
@@ -29,7 +29,7 @@ const Visit2 = () => {
                   <input
                     id="email"
                     type="email"
-                    className="w-full bg-[#d1d1d1] text-[16px] py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#193728] transition"
+                    className="w-full bg-[#d1d1d1] font-medium text-[16px] py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#193728] transition"
                     placeholder="grace@example.com"
                     required
                   />
@@ -43,7 +43,7 @@ const Visit2 = () => {
                   <input
                     id="phone"
                     type="tel"
-                    className="w-full bg-[#d1d1d1] text-[16px] py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#193728] transition"
+                    className="w-full bg-[#d1d1d1] font-medium text-[16px] py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#193728] transition"
                     placeholder="(+234) 702 333 444"
                   />
                 </div>
@@ -54,7 +54,7 @@ const Visit2 = () => {
                   <input
                     id="properties"
                     type="number"
-                    className="w-full bg-[#d1d1d1] text-[16px] py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#193728] transition"
+                    className="w-full bg-[#d1d1d1] font-medium text-[16px] py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#193728] transition"
                     placeholder="2"
                   />
                 </div>
@@ -67,7 +67,7 @@ const Visit2 = () => {
                   <input
                     id="visitDay"
                     type="date"
-                    className="w-full bg-[#d1d1d1] text-[16px] py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#193728] transition"
+                    className="w-full bg-[#d1d1d1] font-medium text-[16px] py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#193728] transition"
                   />
                 </div>
                 <div>
@@ -77,7 +77,7 @@ const Visit2 = () => {
                   <input
                     id="visitTime"
                     type="time"
-                    className="w-full bg-[#d1d1d1] text-[16px] py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#193728] transition"
+                    className="w-full bg-[#d1d1d1] font-medium text-[16px] py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#193728] transition"
                   />
                 </div>
               </div>
@@ -89,7 +89,7 @@ const Visit2 = () => {
                       type="radio"
                       name="applied"
                       value="yes"
-                      className="peer sr-only"
+                      className="peer font-medium sr-only"
                       required
                     />
                     <div className="w-5 h-5 rounded-full border-2 border-[#d1d1d1] bg-[#d1d1d1] peer-checked:bg-[#193728] transition"></div>
@@ -100,7 +100,7 @@ const Visit2 = () => {
                       type="radio"
                       name="applied"
                       value="no"
-                      className="peer sr-only"
+                      className="peer font-medium sr-only"
                     />
                     <div className="w-5 h-5 rounded-full border-2 border-[#d1d1d1] bg-[#d1d1d1] peer-checked:bg-[#193728] transition"></div>
                     <span className="text-gray-800">No</span>
@@ -114,7 +114,7 @@ const Visit2 = () => {
                 <textarea
                   id="message"
                   placeholder="Add any additional information..."
-                  className="w-full bg-[#d1d1d1] text-[16px] py-3 px-4 rounded-md h-24 resize-y focus:outline-none focus:ring-2 focus:ring-[#193728] transition"
+                  className="w-full font-medium bg-[#d1d1d1] text-[16px] py-3 px-4 rounded-md h-24 resize-y focus:outline-none focus:ring-2 focus:ring-[#193728] transition"
                 ></textarea>
               </div>
               <div className="flex justify-start">
@@ -138,16 +138,16 @@ const Visit2 = () => {
             <div className="space-y-4">
               <div className="flex items-center gap-x-4">
                 <MailOpenIcon size={24} className="text-[#193728]" />
-                <p className="text-[16px]">
+                <p className="text-[16px] font-normal">
                   Send us an email <br />
                   <span className="font-semibold">contact@emshub.com</span>
                 </p>
               </div>
               <div className="flex items-center gap-x-4">
                 <SmartphoneIcon size={24} className="text-[#193728]" />
-                <p className="text-[16px]">
+                <p className="text-[16px] font-normal">
                   Give us a call <br />
-                  <span className="font-semibold">(+234) 7012-244-633</span>
+                  <span className="font-semibold " >(+234) 7012-244-633</span>
                 </p>
               </div>
             </div>

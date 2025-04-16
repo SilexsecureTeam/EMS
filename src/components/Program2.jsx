@@ -11,8 +11,8 @@ const Program2 = () => {
             Etiquette programs</h1>
             <div className="md:max-w-[389px] w-full  flex flex-col justify-center">
                 <p className='text-[16px] mb-3 font-normal'>Lorem ipsum dolor sit amet consectetur. Pretium mattis semper massa pharetra enim. Nulla di.</p>
-                <div className="py-3 px-1 flex bg-white justify-between items-center  h-[50px]">
-                    <button className='bg-[#193728] text-white rounded-[5px] py-2 px-5'>student</button>
+                <div className="py-3 px-1 flex bg-white rounded-sm max-w-[330px] gap-x-5 items-center  h-[50px]">
+                    <button className='bg-[#193728] font-medium text-white rounded-[5px] py-2 px-5'>student</button>
                     <p className='text-[16px] font-semibold text-[#333333]'>Parent or Employer </p>
                 </div>
             </div>

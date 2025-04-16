@@ -41,7 +41,7 @@ const Follow2 = () => {
       {images.map((item, index) => (
         <div key={index} className="relative group overflow-hidden rounded-lg ">
           {/* Top Overlay with Icon and Username */}
-          <div className="absolute top-2 left-2 w-full flex items-center space-x-2  text-white text-sm p-2 rounded-t-lg z-10">
+          <div className="absolute top-2 left-2 w-full font-medium flex items-center space-x-2  text-white text-sm p-2 rounded-t-lg z-10">
             {item.icon}
             <span>{item.username}</span>
           </div>

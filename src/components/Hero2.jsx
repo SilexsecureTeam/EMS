@@ -72,7 +72,7 @@ const Hero2 = () => {
        
          return (
            <div 
-             className="h-screen  relative home-2 overflow-hidden md:px-10 px-0 "
+             className="h-screen  relative bg-white overflow-hidden md:px-10 px-0 "
              ref={sliderRef}
              onMouseDown={handleDragStart}
              onMouseMove={handleDragMove}

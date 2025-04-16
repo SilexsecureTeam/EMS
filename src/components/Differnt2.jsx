@@ -4,7 +4,7 @@ import { FileChartColumnIncreasingIcon, MoveRight } from 'lucide-react';
 
 const Differnt2 = () => {
   return (
-    <section className="w-full py-20">
+    <section className="w-full py-8 md:py-20">
     <div className="container mx-auto px-4">
       <div className="flex flex-col lg:flex-row justify-between items-center gap-8">
         <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
