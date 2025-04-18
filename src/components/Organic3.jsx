@@ -48,25 +48,34 @@ const Organic3 = () => {
             </div>
           </div>
            {/* Image Section */}
-           <div className="relative w-full h-[400px] md:h-full">
-            {/* Background box */}
-            <img
-              src={cake}
-              alt="Salad preparation"
-              className="absolute top-0 z-30 right-0 w  w-[30%] h-[30%]  object-cover"
-            />
-            <img
-              src={maid}
-              alt="Salad preparation"
-              className="absolute right-[10%] top-[10%]  w-[80%] h-[80%]  object-cover"
-            />
-            <img
-              src={woman}
-              alt="cake stand"
-              className="absolute bottom-0 z-30 left-0 w-[30%] h-[30%]  object-cover"
-            />
-            {/* <div className="absolute bottom-6 right-6 border-1 border-[#000000] w-4/5 h-4/5 bg-[#CFBDA2] "></div> */}
-          </div>
+              <div className="relative w-full h-[400px] md:h-full">
+                  <div className="absolute top-0 z-30 right-0 w  w-[30%] h-[30%] ">
+                    <img
+                      src={cake}
+                      alt="Salad preparation"
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/50"></div>
+                  </div>
+
+                  <div className="absolute right-[10%] top-[10%]  w-[80%] h-[80%]">
+                    <img
+                      src={maid}
+                      alt="cake stand"
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/50"></div>
+                  </div>
+
+                  <div className="absolute bottom-0 z-30 left-0 w-[30%] h-[30%] ">
+                    <img
+                      src={woman}
+                      alt="cake stand"
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/50"></div>
+                  </div>
+              </div>
         </div>
       </section>
       </div>

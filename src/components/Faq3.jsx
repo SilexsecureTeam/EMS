@@ -37,6 +37,7 @@ const Faq3 = () => {
             alt="FAQ video preview"
             className="w-full h-full object-cover"
           />
+          <div className="right-0 top-0  w-full h-full absolute inset-0 bg-black/60"></div>
           <button className="absolute inset-0 flex items-center justify-center">
             <div className="text-white p-1 cursor-pointer rounded-full border-white border-2 hover:scale-110 transition-transform">
               <svg

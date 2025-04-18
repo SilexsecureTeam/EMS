@@ -54,7 +54,7 @@ const Value3 = () => {
             <p className="text-[15px] text-[#B2B2B2] font-medium uppercase tracking-wide">
               Why Choose Us
             </p>
-            <h2 className="text-3xl md:text-[45px] font-black text-[#303030] mb-4">
+            <h2 className="text-3xl md:text-[45px] font-black text-[#303030] mb-1">
               Our Business Value
             </h2>
             <p className="text-[#6E6E6E] font-medium max-w-[660px] mx-auto text-[17px]">

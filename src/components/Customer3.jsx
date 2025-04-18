@@ -13,8 +13,9 @@ const Customer3 = () => {
           <img
             src={mixing}
             alt="Salad preparation"
-            className="absolute left-0 top-0 z-10 w-[80%] h-[80%]  object-cover"
+            className="absolute left-0 top-0 z-10 w-[85%] h-[88%]  object-cover"
           />
+          <div className="left-0 top-0 z-10 w-[85%] h-[88%]  absolute inset-0 flex items-center justify-center bg-black/60"></div>
           <div className="absolute bottom-0 right-0 border-1 border-[#000000] w-4/5 h-4/5 bg-[#CFBDA2] "></div>
         </div>
 

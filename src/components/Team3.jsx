@@ -42,10 +42,10 @@ const Team3 = () => {
   return (
     <section className="py-16 pb-[200px] bg-white text-center">
       <div className="max-w-6xl mx-auto px-4">
-        <h4 className="text-[15px] uppercase font-medium tracking-widest text-[#b2b2b2] mb-2">
+        <h4 className="text-[15px] uppercase font-medium tracking-widest text-[#b2b2b2] mb-1">
           Our Team Success
         </h4>
-        <h2 className="text-[45px] font-black text-[#303030] mb-4">Our Best Team</h2>
+        <h2 className="text-[45px] font-black text-[#303030] mb-2">Our Best Team</h2>
         <p className="text-[#6E6E6E] max-w-[660px] font-medium mx-auto mb-12">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
           tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
@@ -63,6 +63,7 @@ const Team3 = () => {
                 alt={member.name}
                 className="w-full  h-[450px] object-cover"
               /> 
+              <div className="right-0 top-0  w-full  h-[450px] absolute inset-0 bg-black/60"></div>
               <div className="bg-[#5E5E5E] absolute -bottom-[20%] right-[10%] w-[80%] text-white  flex flex-col items-center">
                <div className="relative py-7 w-full">
                 <p className="text-[15px] font-medium uppercase text-[#B2B2B2] mb-1">{member.title}</p>
@@ -78,8 +79,8 @@ const Team3 = () => {
                     <FaLinkedinIn />
                   </a>
                 </div>
-                <button className="bg-[#C3AA8C] absolute bottom-0 right-0 text-white p-4">
-                  <SendHorizonal size={20} />
+                <button className="bg-[#C3AA8C] absolute bottom-0 right-0  text-white p-4">
+                  <SendHorizonal size={20} className="transform rotate-[315deg]" />
                 </button>
                 </div>
               </div>
